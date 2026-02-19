@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#082f49"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .t{font:700 38px Arial,sans-serif;fill:#ecfeff}
+      .p{font:600 20px Arial,sans-serif;fill:#bae6fd}
+      .k{fill:#0b1220;stroke:#334155}
+    </style>
+  </defs>
+  <rect width="1400" height="760" fill="url(#b)"/>
+  <text x="60" y="70" class="t">AquaForge Outcomes: 8-Week Pilot Summary</text>
+
+  <rect x="80" y="120" width="380" height="240" class="k"/>
+  <text x="110" y="180" class="p">Water Stability Index</text>
+  <text x="110" y="235" class="p">Before: 0.58</text>
+  <text x="110" y="280" class="p">After:  0.84</text>
+
+  <rect x="510" y="120" width="380" height="240" class="k"/>
+  <text x="540" y="180" class="p">Feed Waste Reduction</text>
+  <text x="540" y="235" class="p">-22%</text>
+  <text x="540" y="280" class="p">via dosing forecast</text>
+
+  <rect x="940" y="120" width="380" height="240" class="k"/>
+  <text x="970" y="180" class="p">Unplanned Pump Stops</text>
+  <text x="970" y="235" class="p">Before: 9</text>
+  <text x="970" y="280" class="p">After:  2</text>
+
+  <rect x="80" y="410" width="1240" height="280" class="k"/>
+  <text x="110" y="470" class="p">Digital twin recommendation acceptance: 73%</text>
+  <text x="110" y="520" class="p">Median time to detect chemistry drift: 14 min (previously 52 min)</text>
+  <text x="110" y="570" class="p">Estimated yield uplift in leafy greens: +17%</text>
+  <text x="110" y="620" class="p">Main lesson: operator trust increased only after we exposed confidence and uncertainty bands.</text>
+</svg>

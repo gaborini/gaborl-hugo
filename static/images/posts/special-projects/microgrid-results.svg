@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <linearGradient id="n" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .t{font:700 38px Arial,sans-serif;fill:#ecfdf5}
+      .p{font:600 20px Arial,sans-serif;fill:#a7f3d0}
+      .k{fill:#052e16;stroke:#34d399}
+    </style>
+  </defs>
+  <rect width="1400" height="760" fill="url(#n)"/>
+  <text x="60" y="70" class="t">Microgrid Pilot: Home Lab Energy Optimization (10 Weeks)</text>
+
+  <rect x="80" y="120" width="390" height="240" class="k"/>
+  <text x="110" y="180" class="p">Grid energy cost</text>
+  <text x="110" y="235" class="p">-28%</text>
+  <text x="110" y="285" class="p">vs static charging plan</text>
+
+  <rect x="505" y="120" width="390" height="240" class="k"/>
+  <text x="535" y="180" class="p">Peak import power</text>
+  <text x="535" y="235" class="p">-34%</text>
+  <text x="535" y="285" class="p">via circuit staggering</text>
+
+  <rect x="930" y="120" width="390" height="240" class="k"/>
+  <text x="960" y="180" class="p">Battery stress index</text>
+  <text x="960" y="235" class="p">-16%</text>
+  <text x="960" y="285" class="p">with cycle-aware planning</text>
+
+  <rect x="80" y="420" width="1240" height="250" class="k"/>
+  <text x="110" y="485" class="p">Unexpected inverter disconnects: 0 after adding fallback policy and relay grace windows.</text>
+  <text x="110" y="535" class="p">Main architecture lesson: optimization quality improved most when uncertainty from weather forecast was surfaced.</text>
+  <text x="110" y="585" class="p">Next iteration: neighborhood-level cooperative dispatch over federated schedule sharing.</text>
+</svg>

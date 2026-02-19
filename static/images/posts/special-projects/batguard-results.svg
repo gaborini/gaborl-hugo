@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .t{font:700 38px Arial,sans-serif;fill:#f3f4f6}
+      .p{font:600 20px Arial,sans-serif;fill:#ddd6fe}
+      .card{fill:#111827;stroke:#6d28d9}
+    </style>
+  </defs>
+  <rect width="1400" height="760" fill="url(#g)"/>
+  <text x="60" y="70" class="t">BatGuard Field Trial: 14 Parks, 62 Nights</text>
+
+  <rect x="80" y="120" width="600" height="260" class="card"/>
+  <text x="120" y="185" class="p">Detected valid activity windows: 1,842</text>
+  <text x="120" y="235" class="p">Manual review precision: 0.89</text>
+  <text x="120" y="285" class="p">Median edge inference latency: 62 ms</text>
+  <text x="120" y="335" class="p">Nightly energy budget: 3.8 Wh per node</text>
+
+  <rect x="720" y="120" width="600" height="260" class="card"/>
+  <text x="760" y="185" class="p">Top project impact:</text>
+  <text x="760" y="235" class="p">- Noise ordinance evidence by district</text>
+  <text x="760" y="285" class="p">- Better timing for light reduction policy</text>
+  <text x="760" y="335" class="p">- Faster ranger response on habitat alerts</text>
+
+  <rect x="80" y="420" width="1240" height="250" class="card"/>
+  <text x="120" y="485" class="p">Key engineering lesson: false positives dropped only after adding ambient-noise context from a second low-power node.</text>
+  <text x="120" y="535" class="p">Operational lesson: domain experts preferred fewer alerts with confidence bands over raw event volume.</text>
+  <text x="120" y="585" class="p">Next phase: federated retraining with locality-specific acoustic fingerprints.</text>
+</svg>

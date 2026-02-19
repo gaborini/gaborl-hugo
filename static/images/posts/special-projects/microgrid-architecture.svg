@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <linearGradient id="m" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#052e16"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <style>
+      .title{font:700 40px Arial,sans-serif;fill:#ecfdf5}
+      .label{font:600 22px Arial,sans-serif;fill:#bbf7d0}
+      .small{font:500 18px Arial,sans-serif;fill:#d1fae5}
+      .box{fill:#022c22;stroke:#34d399;stroke-width:2.2;rx:16}
+      .line{stroke:#6ee7b7;stroke-width:4;marker-end:url(#am)}
+    </style>
+    <marker id="am" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0,10 3,0 6" fill="#6ee7b7"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="820" fill="url(#m)"/>
+  <text x="60" y="80" class="title">Garage Microgrid Orchestrator: Pi Cluster + Arduino Metering</text>
+
+  <rect x="70" y="160" width="350" height="190" class="box"/>
+  <text x="95" y="215" class="label">Meter Node (Arduino + CT clamps)</text>
+  <text x="95" y="250" class="small">Per-circuit power and harmonics</text>
+  <text x="95" y="280" class="small">Breaker and relay status</text>
+  <text x="95" y="310" class="small">Fast local trip logic</text>
+
+  <rect x="70" y="430" width="350" height="190" class="box"/>
+  <text x="95" y="485" class="label">Battery / Inverter Gateway</text>
+  <text x="95" y="520" class="small">Modbus polling and normalization</text>
+  <text x="95" y="550" class="small">SoC and cycle health metrics</text>
+  <text x="95" y="580" class="small">Contingency fallback profiles</text>
+
+  <rect x="510" y="240" width="370" height="240" class="box"/>
+  <text x="535" y="295" class="label">Pi Cluster Scheduler (Rust)</text>
+  <text x="535" y="330" class="small">Forecast-driven load shifting</text>
+  <text x="535" y="360" class="small">Price-aware charging policy</text>
+  <text x="535" y="390" class="small">Circuit priority planner</text>
+  <text x="535" y="420" class="small">Failure domain isolation</text>
+  <text x="535" y="450" class="small">Audit and what-if simulator</text>
+
+  <rect x="980" y="170" width="330" height="180" class="box"/>
+  <text x="1005" y="220" class="label">Utility + Weather Inputs</text>
+  <text x="1005" y="255" class="small">Tariff and outage signals</text>
+  <text x="1005" y="285" class="small">Solar irradiance forecast</text>
+  <text x="1005" y="315" class="small">Demand response events</text>
+
+  <rect x="980" y="430" width="330" height="180" class="box"/>
+  <text x="1005" y="480" class="label">Operations Dashboard</text>
+  <text x="1005" y="515" class="small">Cost and carbon scorecards</text>
+  <text x="1005" y="545" class="small">Manual override workflow</text>
+  <text x="1005" y="575" class="small">Failure replay timeline</text>
+
+  <line x1="420" y1="260" x2="510" y2="320" class="line"/>
+  <line x1="420" y1="530" x2="510" y2="400" class="line"/>
+  <line x1="880" y1="320" x2="980" y2="260" class="line"/>
+  <line x1="880" y1="390" x2="980" y2="530" class="line"/>
+</svg>

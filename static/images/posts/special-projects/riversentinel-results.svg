@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <linearGradient id="q" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .t{font:700 38px Arial,sans-serif;fill:#eff6ff}
+      .p{font:600 20px Arial,sans-serif;fill:#bfdbfe}
+      .k{fill:#172554;stroke:#93c5fd}
+    </style>
+  </defs>
+  <rect width="1400" height="760" fill="url(#q)"/>
+  <text x="60" y="70" class="t">RiverSentinel Baseline Program: 4 Sites, 90 Days</text>
+
+  <rect x="80" y="120" width="390" height="240" class="k"/>
+  <text x="110" y="180" class="p">Contamination lead time</text>
+  <text x="110" y="235" class="p">+2.6 hours earlier</text>
+  <text x="110" y="285" class="p">than manual spot checks</text>
+
+  <rect x="505" y="120" width="390" height="240" class="k"/>
+  <text x="535" y="180" class="p">Data completeness</text>
+  <text x="535" y="235" class="p">97.1%</text>
+  <text x="535" y="285" class="p">through storm periods</text>
+
+  <rect x="930" y="120" width="390" height="240" class="k"/>
+  <text x="960" y="180" class="p">False escalation events</text>
+  <text x="960" y="235" class="p">-41%</text>
+  <text x="960" y="285" class="p">after consensus logic</text>
+
+  <rect x="80" y="420" width="1240" height="250" class="k"/>
+  <text x="110" y="485" class="p">Most important win: agencies received structured, confidence-scored incidents instead of raw spikes.</text>
+  <text x="110" y="535" class="p">Key challenge: sensor biofouling required aggressive maintenance playbook updates.</text>
+  <text x="110" y="585" class="p">Next phase: self-cleaning probe rig and adaptive calibration with lab reference sampling.</text>
+</svg>

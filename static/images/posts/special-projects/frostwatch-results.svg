@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <style>
+      .t{font:700 38px Arial,sans-serif;fill:#f8fafc}
+      .a{font:600 20px Arial,sans-serif;fill:#cbd5e1}
+      .g{stroke:#94a3b8;stroke-width:1}
+      .line1{fill:none;stroke:#60a5fa;stroke-width:4}
+      .line2{fill:none;stroke:#f97316;stroke-width:4}
+      .line3{fill:none;stroke:#22c55e;stroke-width:4}
+    </style>
+  </defs>
+  <rect width="1400" height="760" fill="url(#bg)"/>
+  <text x="60" y="70" class="t">Frostwatch Pilot: 21-Day Risk Prediction vs Actual Frost Events</text>
+  <rect x="80" y="120" width="1240" height="520" fill="#0b1220" stroke="#475569"/>
+
+  <g>
+    <line x1="120" y1="580" x2="1280" y2="580" class="g"/>
+    <line x1="120" y1="500" x2="1280" y2="500" class="g"/>
+    <line x1="120" y1="420" x2="1280" y2="420" class="g"/>
+    <line x1="120" y1="340" x2="1280" y2="340" class="g"/>
+    <line x1="120" y1="260" x2="1280" y2="260" class="g"/>
+    <line x1="120" y1="180" x2="1280" y2="180" class="g"/>
+  </g>
+
+  <polyline class="line1" points="120,520 180,470 240,490 300,430 360,410 420,380 480,420 540,350 600,330 660,300 720,340 780,280 840,260 900,240 960,270 1020,220 1080,210 1140,190 1200,170 1260,180"/>
+  <polyline class="line2" points="120,560 180,540 240,535 300,520 360,510 420,500 480,515 540,490 600,480 660,470 720,500 780,455 840,440 900,430 960,445 1020,410 1080,400 1140,395 1200,390 1260,380"/>
+  <polyline class="line3" points="120,600 180,590 240,595 300,585 360,570 420,560 480,575 540,550 600,545 660,540 720,555 780,535 840,525 900,515 960,530 1020,505 1080,500 1140,490 1200,480 1260,470"/>
+
+  <text x="100" y="680" class="a">Blue: Risk score</text>
+  <text x="360" y="680" class="a">Orange: Minimum canopy temperature</text>
+  <text x="790" y="680" class="a">Green: Mitigation activation confidence</text>
+  <text x="60" y="730" class="a">Observed result: 31% fewer frost damage incidents compared to previous season on pilot rows.</text>
+</svg>
