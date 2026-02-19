@@ -1,6 +1,6 @@
 +++
 title = "Arduino Sensor Calibration and Filtering Playbook"
-date = 2026-02-12T09:00:00-05:00
+date = 2024-08-31T09:00:00-05:00
 slug = "arduino-sensor-calibration-and-filtering-playbook"
 tags = ["arduino", "calibration", "signal-processing", "sensors", "data-quality"]
 categories = ["Arduino"]

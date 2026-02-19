@@ -1,6 +1,6 @@
 +++
 title = "ESP32 Wi-Fi Recovery Patterns for Unstable Networks"
-date = 2026-02-16T09:00:00-05:00
+date = 2024-07-19T09:00:00-05:00
 slug = "esp32-wifi-recovery-patterns-for-unstable-networks"
 tags = ["esp32", "wifi", "iot", "reliability", "firmware"]
 categories = ["Embedded"]

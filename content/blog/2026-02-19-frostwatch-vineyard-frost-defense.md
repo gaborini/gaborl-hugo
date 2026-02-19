@@ -1,6 +1,6 @@
 +++
 title = "Special Project: Frostwatch Vineyard Frost Defense Network"
-date = 2026-02-19T09:30:00-05:00
+date = 2024-06-23T09:00:00-05:00
 slug = "special-project-frostwatch-vineyard-frost-defense-network"
 tags = ["arduino", "raspberry pi", "rust", "lora", "special-project"]
 categories = ["Special Projects"]

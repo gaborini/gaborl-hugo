@@ -1,6 +1,6 @@
 +++
 title = "Rust Tokio Gateway Architecture for Device Fleets"
-date = 2025-10-27T09:00:00-05:00
+date = 2024-11-12T09:00:00-05:00
 slug = "rust-tokio-gateway-architecture-for-device-fleets"
 tags = ["rust", "tokio", "gateway", "iot", "async"]
 categories = ["Rust"]

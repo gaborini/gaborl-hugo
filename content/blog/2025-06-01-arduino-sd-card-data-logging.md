@@ -1,6 +1,6 @@
 +++
 title = "Reliable SD Card Data Logging on Arduino"
-date = 2025-06-01T09:00:00-05:00
+date = 2025-01-26T09:00:00-05:00
 slug = "reliable-sd-card-data-logging-on-arduino"
 tags = ["arduino", "sd-card", "data-logging", "storage"]
 categories = ["Arduino"]

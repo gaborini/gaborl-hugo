@@ -1,6 +1,6 @@
 +++
 title = "Systemd Service Patterns for Raspberry Pi Projects"
-date = 2025-09-29T09:00:00-05:00
+date = 2024-12-11T09:00:00-05:00
 slug = "systemd-service-patterns-for-raspberry-pi-projects"
 tags = ["raspberry pi", "systemd", "devops", "linux"]
 categories = ["Raspberry Pi"]

@@ -1,6 +1,6 @@
 +++
 title = "KiCad PCB Review Checklist Before Sending to Fabrication"
-date = 2026-02-23T09:00:00-05:00
+date = 2024-06-09T09:00:00-05:00
 slug = "kicad-pcb-review-checklist-before-sending-to-fabrication"
 tags = ["kicad", "pcb", "electronics", "hardware", "design-review"]
 categories = ["Electronics"]

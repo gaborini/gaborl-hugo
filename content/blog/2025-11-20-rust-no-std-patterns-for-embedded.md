@@ -1,6 +1,6 @@
 +++
 title = "Rust no_std Patterns for Embedded Systems"
-date = 2025-11-20T09:00:00-05:00
+date = 2024-10-15T09:00:00-05:00
 slug = "rust-no-std-patterns-for-embedded-systems"
 tags = ["rust", "embedded", "no_std", "firmware", "architecture"]
 categories = ["Rust"]

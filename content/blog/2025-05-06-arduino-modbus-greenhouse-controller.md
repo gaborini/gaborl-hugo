@@ -1,6 +1,6 @@
 +++
 title = "Building a Modbus Greenhouse Controller with Arduino"
-date = 2025-05-06T09:00:00-05:00
+date = 2025-02-03T09:00:00-05:00
 slug = "building-a-modbus-greenhouse-controller-with-arduino"
 tags = ["arduino", "modbus", "rs485", "automation"]
 categories = ["Arduino"]

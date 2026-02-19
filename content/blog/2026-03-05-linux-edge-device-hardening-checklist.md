@@ -1,6 +1,6 @@
 +++
 title = "Linux Edge Device Hardening Checklist"
-date = 2026-03-05T09:00:00-05:00
+date = 2024-05-17T09:00:00-05:00
 slug = "linux-edge-device-hardening-checklist"
 tags = ["linux", "security", "edge", "devops", "operations"]
 categories = ["IoT"]

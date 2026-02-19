@@ -1,6 +1,6 @@
 +++
 title = "Versioned EEPROM Settings on Arduino"
-date = 2025-07-03T09:00:00-05:00
+date = 2025-01-12T09:00:00-05:00
 slug = "versioned-eeprom-settings-on-arduino"
 tags = ["arduino", "eeprom", "configuration", "firmware"]
 categories = ["Arduino"]

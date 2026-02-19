@@ -1,6 +1,6 @@
 +++
 title = "Rust Testing Pyramid for Hardware-Connected Projects"
-date = 2026-02-15T09:00:00-05:00
+date = 2024-08-01T09:00:00-05:00
 slug = "rust-testing-pyramid-for-hardware-connected-projects"
 tags = ["rust", "testing", "hardware", "quality", "ci"]
 categories = ["Rust"]

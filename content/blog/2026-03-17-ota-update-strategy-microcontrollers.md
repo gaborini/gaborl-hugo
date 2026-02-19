@@ -1,6 +1,6 @@
 +++
 title = "OTA Update Strategy for Microcontrollers Without Bricking Devices"
-date = 2026-03-17T09:00:00-05:00
+date = 2024-05-01T09:00:00-05:00
 slug = "ota-update-strategy-for-microcontrollers-without-bricking-devices"
 tags = ["ota", "firmware", "embedded", "iot", "reliability"]
 categories = ["Embedded"]

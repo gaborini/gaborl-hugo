@@ -1,6 +1,6 @@
 +++
 title = "Raspberry Pi Docker Compose Patterns for Stable Homelabs"
-date = 2026-03-21T09:00:00-05:00
+date = 2024-04-19T09:00:00-05:00
 slug = "raspberry-pi-docker-compose-patterns-for-stable-homelabs"
 tags = ["raspberry pi", "docker", "compose", "homelab", "operations"]
 categories = ["Raspberry Pi"]

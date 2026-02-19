@@ -1,6 +1,6 @@
 +++
 title = "Rust Telemetry Pipelines: Protobuf vs JSON Tradeoffs"
-date = 2026-03-25T09:00:00-05:00
+date = 2024-04-17T09:00:00-05:00
 slug = "rust-telemetry-pipelines-protobuf-vs-json-tradeoffs"
 tags = ["rust", "protobuf", "json", "telemetry", "backend"]
 categories = ["Rust"]

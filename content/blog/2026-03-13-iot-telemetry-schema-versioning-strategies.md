@@ -1,6 +1,6 @@
 +++
 title = "IoT Telemetry Schema Versioning Strategies"
-date = 2026-03-13T09:00:00-05:00
+date = 2024-05-04T09:00:00-05:00
 slug = "iot-telemetry-schema-versioning-strategies"
 tags = ["iot", "schema", "data-engineering", "telemetry", "architecture"]
 categories = ["IoT"]

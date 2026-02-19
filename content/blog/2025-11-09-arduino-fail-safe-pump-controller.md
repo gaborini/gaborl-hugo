@@ -1,6 +1,6 @@
 +++
 title = "Designing a Fail-Safe Pump Controller with Arduino"
-date = 2025-11-09T09:00:00-05:00
+date = 2024-10-30T09:00:00-05:00
 slug = "designing-a-fail-safe-pump-controller-with-arduino"
 tags = ["arduino", "automation", "safety", "control-systems", "relays"]
 categories = ["Arduino"]

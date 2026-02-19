@@ -1,6 +1,6 @@
 +++
 title = "Outdoor Sensor Enclosure Design Beyond 'It Fits in a Box'"
-date = 2026-03-01T09:00:00-05:00
+date = 2024-05-25T09:00:00-05:00
 slug = "outdoor-sensor-enclosure-design-beyond-it-fits-in-a-box"
 tags = ["sensors", "mechanical", "outdoor", "iot", "reliability"]
 categories = ["Embedded"]

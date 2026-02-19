@@ -1,6 +1,6 @@
 +++
 title = "Special Project: BatGuard Urban Biodiversity Edge AI"
-date = 2026-02-17T09:15:00-05:00
+date = 2024-07-17T09:00:00-05:00
 slug = "special-project-batguard-urban-biodiversity-edge-ai"
 tags = ["raspberry pi", "rust", "edge-ai", "iot", "special-project"]
 categories = ["Special Projects"]

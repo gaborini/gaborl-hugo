@@ -1,6 +1,6 @@
 +++
 title = "Testing Hardware Abstractions in Rust"
-date = 2026-02-10T09:00:00-05:00
+date = 2024-09-09T09:00:00-05:00
 slug = "testing-hardware-abstractions-in-rust"
 tags = ["rust", "testing", "embedded", "architecture"]
 categories = ["Rust"]

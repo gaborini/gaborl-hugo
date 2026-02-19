@@ -1,6 +1,6 @@
 +++
 title = "Special Project: Garage Microgrid Orchestrator"
-date = 2026-02-15T09:45:00-05:00
+date = 2024-08-09T09:00:00-05:00
 slug = "special-project-garage-microgrid-orchestrator"
 tags = ["raspberry pi", "arduino", "rust", "energy", "special-project"]
 categories = ["Special Projects"]

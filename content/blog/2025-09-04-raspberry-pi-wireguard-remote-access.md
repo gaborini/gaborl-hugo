@@ -1,6 +1,6 @@
 +++
 title = "Secure Remote Access to Raspberry Pi with WireGuard"
-date = 2025-09-04T09:00:00-05:00
+date = 2024-12-15T09:00:00-05:00
 slug = "secure-remote-access-to-raspberry-pi-with-wireguard"
 tags = ["raspberry pi", "wireguard", "security", "linux"]
 categories = ["Raspberry Pi"]

@@ -1,6 +1,6 @@
 +++
 title = "Special Project: AquaForge Aquaponics Digital Twin"
-date = 2026-02-18T10:00:00-05:00
+date = 2024-07-10T09:00:00-05:00
 slug = "special-project-aquaforge-aquaponics-digital-twin"
 tags = ["arduino", "raspberry pi", "rust", "digital-twin", "special-project"]
 categories = ["Special Projects"]

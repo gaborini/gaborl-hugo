@@ -1,6 +1,6 @@
 +++
 title = "Raspberry Pi Edge AI Camera Pipeline: Practical Design"
-date = 2026-02-14T09:00:00-05:00
+date = 2024-08-22T09:00:00-05:00
 slug = "raspberry-pi-edge-ai-camera-pipeline-practical-design"
 tags = ["raspberry pi", "edge ai", "camera", "python", "performance"]
 categories = ["Raspberry Pi"]

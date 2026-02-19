@@ -1,6 +1,6 @@
 +++
 title = "Error Handling Patterns in Rust: anyhow + thiserror"
-date = 2026-01-05T09:00:00-05:00
+date = 2024-09-23T09:00:00-05:00
 slug = "error-handling-patterns-in-rust-anyhow-thiserror"
 tags = ["rust", "error-handling", "anyhow", "thiserror"]
 categories = ["Rust"]

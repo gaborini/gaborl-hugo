@@ -1,6 +1,6 @@
 +++
 title = "Home Assistant + MQTT Device Modeling Done Right"
-date = 2026-02-18T09:00:00-05:00
+date = 2024-07-02T09:00:00-05:00
 slug = "home-assistant-mqtt-device-modeling-done-right"
 tags = ["home assistant", "mqtt", "iot", "automation", "integration"]
 categories = ["IoT"]

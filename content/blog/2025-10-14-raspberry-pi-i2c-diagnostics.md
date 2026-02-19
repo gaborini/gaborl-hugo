@@ -1,6 +1,6 @@
 +++
 title = "Raspberry Pi I2C Diagnostics in Mixed Sensor Setups"
-date = 2025-10-14T09:00:00-05:00
+date = 2024-11-28T09:00:00-05:00
 slug = "raspberry-pi-i2c-diagnostics-in-mixed-sensor-setups"
 tags = ["raspberry pi", "i2c", "sensors", "debugging"]
 categories = ["Raspberry Pi"]

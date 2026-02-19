@@ -1,6 +1,6 @@
 +++
 title = "Rust Cross-Compilation for ARM Targets"
-date = 2026-01-21T09:00:00-05:00
+date = 2024-09-18T09:00:00-05:00
 slug = "rust-cross-compilation-for-arm-targets"
 tags = ["rust", "cross-compilation", "arm", "toolchain"]
 categories = ["Rust"]

@@ -1,6 +1,6 @@
 +++
 title = "Raspberry Pi Homelab Observability Stack from Zero"
-date = 2025-10-25T09:00:00-05:00
+date = 2024-11-14T09:00:00-05:00
 slug = "raspberry-pi-homelab-observability-stack-from-zero"
 tags = ["raspberry pi", "observability", "prometheus", "grafana", "linux"]
 categories = ["Raspberry Pi"]

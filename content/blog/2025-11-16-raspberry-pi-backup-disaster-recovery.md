@@ -1,6 +1,6 @@
 +++
 title = "Raspberry Pi Backup and Disaster Recovery That Actually Works"
-date = 2025-11-16T09:00:00-05:00
+date = 2024-10-18T09:00:00-05:00
 slug = "raspberry-pi-backup-and-disaster-recovery-that-actually-works"
 tags = ["raspberry pi", "backup", "disaster-recovery", "linux", "operations"]
 categories = ["Raspberry Pi"]

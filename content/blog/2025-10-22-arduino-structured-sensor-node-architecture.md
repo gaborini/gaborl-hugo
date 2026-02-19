@@ -1,6 +1,6 @@
 +++
 title = "Arduino Sensor Node Architecture That Survives Real Deployments"
-date = 2025-10-22T09:00:00-05:00
+date = 2024-11-26T09:00:00-05:00
 slug = "arduino-sensor-node-architecture-that-survives-real-deployments"
 tags = ["arduino", "firmware", "architecture", "sensors", "reliability"]
 categories = ["Arduino"]

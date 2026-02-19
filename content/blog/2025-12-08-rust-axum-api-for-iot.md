@@ -1,6 +1,6 @@
 +++
 title = "A Lightweight IoT API in Rust with Axum"
-date = 2025-12-08T09:00:00-05:00
+date = 2024-09-30T09:00:00-05:00
 slug = "a-lightweight-iot-api-in-rust-with-axum"
 tags = ["rust", "axum", "api", "iot"]
 categories = ["Rust"]

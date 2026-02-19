@@ -1,6 +1,6 @@
 +++
 title = "Building Fast Serial CLI Tools in Rust"
-date = 2025-11-06T09:00:00-05:00
+date = 2024-11-03T09:00:00-05:00
 slug = "building-fast-serial-cli-tools-in-rust"
 tags = ["rust", "serial", "cli", "tooling"]
 categories = ["Rust"]

@@ -1,6 +1,6 @@
 +++
 title = "Embedded Power Supply Design Basics for Mixed Sensor Systems"
-date = 2026-02-26T09:00:00-05:00
+date = 2024-06-02T09:00:00-05:00
 slug = "embedded-power-supply-design-basics-for-mixed-sensor-systems"
 tags = ["embedded", "power", "electronics", "sensors", "hardware"]
 categories = ["Electronics"]

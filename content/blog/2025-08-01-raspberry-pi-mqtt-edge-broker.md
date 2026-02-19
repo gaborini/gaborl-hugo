@@ -1,6 +1,6 @@
 +++
 title = "Running an MQTT Edge Broker on Raspberry Pi"
-date = 2025-08-01T09:00:00-05:00
+date = 2024-12-30T09:00:00-05:00
 slug = "running-an-mqtt-edge-broker-on-raspberry-pi"
 tags = ["raspberry pi", "mqtt", "iot", "edge"]
 categories = ["Raspberry Pi"]

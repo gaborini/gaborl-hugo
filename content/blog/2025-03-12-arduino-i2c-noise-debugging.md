@@ -1,6 +1,6 @@
 +++
 title = "Debugging Noisy I2C Buses on Arduino"
-date = 2025-03-12T09:00:00-05:00
+date = 2025-02-18T09:00:00-05:00
 slug = "debugging-noisy-i2c-buses-on-arduino"
 tags = ["arduino", "i2c", "sensors", "debugging"]
 categories = ["Arduino"]

@@ -1,6 +1,6 @@
 +++
 title = "MQTT Topic Design and Governance for Growing Projects"
-date = 2026-03-09T09:00:00-05:00
+date = 2024-05-11T09:00:00-05:00
 slug = "mqtt-topic-design-and-governance-for-growing-projects"
 tags = ["mqtt", "architecture", "iot", "naming", "scalability"]
 categories = ["IoT"]

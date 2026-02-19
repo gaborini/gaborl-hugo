@@ -1,6 +1,6 @@
 +++
 title = "Tuning PID Motor Control on Arduino Without Guesswork"
-date = 2025-06-18T09:00:00-05:00
+date = 2025-01-20T09:00:00-05:00
 slug = "tuning-pid-motor-control-on-arduino-without-guesswork"
 tags = ["arduino", "pid", "motor-control", "control-systems"]
 categories = ["Arduino"]

@@ -1,6 +1,6 @@
 +++
 title = "Low-Power Sleep Patterns for Arduino Field Nodes"
-date = 2025-04-02T09:00:00-05:00
+date = 2025-02-06T09:00:00-05:00
 slug = "low-power-sleep-patterns-for-arduino-field-nodes"
 tags = ["arduino", "low-power", "battery", "iot"]
 categories = ["Arduino"]

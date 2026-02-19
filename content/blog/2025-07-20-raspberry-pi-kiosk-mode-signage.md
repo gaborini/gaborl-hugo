@@ -1,6 +1,6 @@
 +++
 title = "Raspberry Pi Kiosk Mode for Reliable Signage"
-date = 2025-07-20T09:00:00-05:00
+date = 2025-01-08T09:00:00-05:00
 slug = "raspberry-pi-kiosk-mode-for-reliable-signage"
 tags = ["raspberry pi", "kiosk", "linux", "automation"]
 categories = ["Raspberry Pi"]

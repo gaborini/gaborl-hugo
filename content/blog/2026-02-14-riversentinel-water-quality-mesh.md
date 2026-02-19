@@ -1,6 +1,6 @@
 +++
 title = "Special Project: RiverSentinel Water Quality Mesh"
-date = 2026-02-14T08:20:00-05:00
+date = 2024-08-20T09:00:00-05:00
 slug = "special-project-riversentinel-water-quality-mesh"
 tags = ["esp32", "raspberry pi", "rust", "environment", "special-project"]
 categories = ["Special Projects"]

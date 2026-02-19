@@ -1,6 +1,6 @@
 +++
 title = "Special Project: CNCSense Retrofitted Predictive Maintenance"
-date = 2026-02-16T11:00:00-05:00
+date = 2024-07-30T09:00:00-05:00
 slug = "special-project-cncsense-retrofitted-predictive-maintenance"
 tags = ["arduino", "raspberry pi", "rust", "predictive-maintenance", "special-project"]
 categories = ["Special Projects"]

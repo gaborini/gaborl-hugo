@@ -1,6 +1,6 @@
 +++
 title = "Embedded State Machines in Rust"
-date = 2025-11-24T09:00:00-05:00
+date = 2024-10-03T09:00:00-05:00
 slug = "embedded-state-machines-in-rust"
 tags = ["rust", "embedded", "state-machine", "firmware"]
 categories = ["Rust"]

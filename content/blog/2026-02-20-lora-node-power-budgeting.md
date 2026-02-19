@@ -1,6 +1,6 @@
 +++
 title = "LoRa Sensor Node Power Budgeting in Practice"
-date = 2026-02-20T09:00:00-05:00
+date = 2024-06-19T09:00:00-05:00
 slug = "lora-sensor-node-power-budgeting-in-practice"
 tags = ["lora", "iot", "low-power", "battery", "embedded"]
 categories = ["Embedded"]

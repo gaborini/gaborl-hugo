@@ -1,6 +1,6 @@
 +++
 title = "A Raspberry Pi Camera Timelapse Pipeline"
-date = 2025-08-17T09:00:00-05:00
+date = 2024-12-19T09:00:00-05:00
 slug = "a-raspberry-pi-camera-timelapse-pipeline"
 tags = ["raspberry pi", "camera", "automation", "media"]
 categories = ["Raspberry Pi"]
