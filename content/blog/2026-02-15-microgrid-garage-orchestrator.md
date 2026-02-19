@@ -10,6 +10,10 @@ metakeywords = "home microgrid orchestration, rust scheduler raspberry pi, ardui
 
 This project started with a practical question: can a small home lab run like a disciplined microgrid instead of a set of independent devices fighting each other? I built a multi-node orchestrator that shifts loads by tariff, forecast, and battery health while preserving safety and comfort constraints.
 
+![Stock photo: rooftop solar installation](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Solar_panels_on_house_roof.jpg/1280px-Solar_panels_on_house_roof.jpg)
+
+*Stock photo source: Wikimedia Commons.*
+
 ![Microgrid architecture](/images/posts/special-projects/microgrid-architecture.svg)
 
 *Figure 1: Architecture linking metering, inverter gateway, and Rust-based schedule planner.*

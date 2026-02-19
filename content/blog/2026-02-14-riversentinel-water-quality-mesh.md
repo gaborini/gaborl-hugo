@@ -10,6 +10,10 @@ metakeywords = "water quality iot mesh, rust edge validation, river contaminatio
 
 RiverSentinel was designed for environmental monitoring teams that need faster incident detection than manual sampling can provide, but also need evidence quality high enough for response workflows. The project built an autonomous buoy mesh with edge validation, consensus-based escalation, and regulatory-ready event packaging.
 
+![Stock photo: urban runoff and water quality context](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/View_of_urban_runoff_discharging_to_coastal_waters.jpg/1280px-View_of_urban_runoff_discharging_to_coastal_waters.jpg)
+
+*Stock photo source: Wikimedia Commons.*
+
 ![RiverSentinel architecture](/images/posts/special-projects/riversentinel-architecture.svg)
 
 *Figure 1: RiverSentinel architecture from buoy sensors to agency action pipeline.*

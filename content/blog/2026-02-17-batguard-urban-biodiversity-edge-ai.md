@@ -10,6 +10,10 @@ metakeywords = "edge ai acoustic monitoring, raspberry pi biodiversity, rust str
 
 BatGuard is an urban biodiversity platform designed for one hard reality: ecological signals are noisy, and policy action requires credible evidence. The system captures ultrasonic activity, classifies probable species groups at the edge, and creates confidence-scored event timelines that city teams can use for interventions.
 
+![Stock photo: bat close-up](https://upload.wikimedia.org/wikipedia/commons/7/77/Big-eared-townsend-fledermaus.jpg)
+
+*Stock photo source: Wikimedia Commons.*
+
 ![BatGuard architecture](/images/posts/special-projects/batguard-architecture.svg)
 
 *Figure 1: BatGuard data path from ultrasonic capture nodes to response workflows.*

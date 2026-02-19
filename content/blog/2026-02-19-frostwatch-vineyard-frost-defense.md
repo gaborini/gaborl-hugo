@@ -10,6 +10,10 @@ metakeywords = "lora frost detection, vineyard iot, raspberry pi rust edge"
 
 Frostwatch is one of the most practical systems I have built: a distributed frost-risk platform for vineyards where timing matters more than dashboards. If you detect frost risk 20 minutes too late, the damage is already done. The objective was simple to state and hard to deliver: create an edge-first system that predicts frost risk per row, survives bad weather and connectivity loss, and triggers mitigation actions with high confidence.
 
+![Stock photo: vineyard landscape](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Vineyards_in_Burgundy_France.jpg/1280px-Vineyards_in_Burgundy_France.jpg)
+
+*Stock photo source: Wikimedia Commons.*
+
 ![Frostwatch architecture](/images/posts/special-projects/frostwatch-architecture.svg)
 
 *Figure 1: End-to-end Frostwatch architecture from field nodes to operations dashboard.*

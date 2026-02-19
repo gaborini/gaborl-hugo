@@ -10,6 +10,10 @@ metakeywords = "cnc predictive maintenance, arduino vibration sensing, rust edge
 
 CNCSense was built to solve a common manufacturing pain: legacy machines fail without enough warning, and maintenance teams are forced into reactive firefighting. Replacing whole lines was not an option, so the project goal was retrofit-first predictive maintenance with minimal intrusion.
 
+![Stock photo: CNC machine in workshop](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/CNC_machine.jpg/1280px-CNC_machine.jpg)
+
+*Stock photo source: Wikimedia Commons.*
+
 ![CNCSense architecture](/images/posts/special-projects/cncsense-architecture.svg)
 
 *Figure 1: Retrofit topology across machine edge kit, PLC bridge, and Rust analytics hub.*

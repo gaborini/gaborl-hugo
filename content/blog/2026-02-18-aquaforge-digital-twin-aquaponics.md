@@ -10,6 +10,10 @@ metakeywords = "aquaponics digital twin, raspberry pi rust automation, arduino c
 
 AquaForge started as a home-scale aquaponics controller and evolved into a real digital twin platform. The core idea was to move from reactive control to predictive operation: detect chemistry drift early, simulate intervention outcomes, and reduce both stress events and wasted inputs.
 
+![Stock photo: aquaponics growing setup](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Portable_fish_farm_at_growing_power.jpg/1280px-Portable_fish_farm_at_growing_power.jpg)
+
+*Stock photo source: Wikimedia Commons.*
+
 ![AquaForge architecture](/images/posts/special-projects/aquaforge-architecture.svg)
 
 *Figure 1: System decomposition of AquaForge with hard real-time control at the edge and model-driven decision support.*
