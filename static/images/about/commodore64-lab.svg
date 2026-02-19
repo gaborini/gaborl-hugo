@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1f5a"/>
+      <stop offset="100%" stop-color="#1c2f75"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 46px "Courier New", monospace; fill: #dbe7ff; }
+      .label { font: 600 24px "Courier New", monospace; fill: #bcd0ff; }
+      .mono { font: 500 22px "Courier New", monospace; fill: #8ec5ff; }
+      .shell { font: 500 22px "Courier New", monospace; fill: #8bff8f; }
+      .panel { fill: #0a1440; stroke: #7ca1ff; stroke-width: 3; rx: 14; }
+      .line { stroke: #8ec5ff; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="760" fill="url(#bg)"/>
+
+  <text x="70" y="85" class="title">From Commodore 64 to Rust and Raspberry Pi</text>
+
+  <rect x="80" y="130" width="760" height="470" class="panel"/>
+  <rect x="110" y="170" width="700" height="360" fill="#081131" stroke="#5f84ff" stroke-width="2"/>
+
+  <text x="130" y="210" class="shell">**** COMMODORE 64 BASIC V2 ****</text>
+  <text x="130" y="245" class="shell">64K RAM SYSTEM 38911 BASIC BYTES FREE</text>
+  <text x="130" y="280" class="shell">READY.</text>
+  <text x="130" y="315" class="shell">LOAD "*",8,1</text>
+  <text x="130" y="350" class="shell">SEARCHING FOR *</text>
+  <text x="130" y="385" class="shell">LOADING</text>
+  <text x="130" y="420" class="shell">READY.</text>
+  <text x="130" y="455" class="shell">RUN</text>
+
+  <rect x="100" y="560" width="720" height="40" fill="#13245f" stroke="#5f84ff"/>
+  <rect x="140" y="575" width="40" height="12" fill="#6d8fff"/>
+  <rect x="190" y="575" width="40" height="12" fill="#6d8fff"/>
+  <rect x="240" y="575" width="40" height="12" fill="#6d8fff"/>
+  <rect x="290" y="575" width="40" height="12" fill="#6d8fff"/>
+  <rect x="340" y="575" width="40" height="12" fill="#6d8fff"/>
+  <rect x="390" y="575" width="40" height="12" fill="#6d8fff"/>
+  <rect x="440" y="575" width="40" height="12" fill="#6d8fff"/>
+  <rect x="490" y="575" width="40" height="12" fill="#6d8fff"/>
+  <rect x="540" y="575" width="40" height="12" fill="#6d8fff"/>
+  <rect x="590" y="575" width="40" height="12" fill="#6d8fff"/>
+  <rect x="640" y="575" width="40" height="12" fill="#6d8fff"/>
+  <rect x="690" y="575" width="40" height="12" fill="#6d8fff"/>
+
+  <rect x="900" y="170" width="420" height="430" class="panel"/>
+  <text x="930" y="220" class="label">Lab Stack (Today)</text>
+  <line x1="930" y1="235" x2="1285" y2="235" class="line"/>
+
+  <text x="930" y="280" class="mono">- Arduino + ESP32 field nodes</text>
+  <text x="930" y="320" class="mono">- Raspberry Pi edge gateways</text>
+  <text x="930" y="360" class="mono">- Rust services for ingest and rules</text>
+  <text x="930" y="400" class="mono">- MQTT, LoRa, systemd, Docker</text>
+  <text x="930" y="440" class="mono">- Long-form postmortems on failures</text>
+  <text x="930" y="500" class="label">Core idea:</text>
+  <text x="930" y="535" class="mono">Build small systems with clear logic,</text>
+  <text x="930" y="565" class="mono">strong diagnostics, and nerd joy.</text>
+
+  <text x="70" y="705" class="mono">READY. > keep shipping weird practical projects.</text>
+</svg>
