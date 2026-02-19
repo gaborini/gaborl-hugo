@@ -1,0 +1,35 @@
+<style>
+  .footer {
+    width: 100%;
+    text-align: center;
+    line-height: 1.8em;
+    margin-bottom: 40px !important;
+    font-size: 1.4rem;
+  }
+  .site-disclaimer {
+    font-size: 10px;
+    line-height: 1.4;
+    margin: 0 0 1rem;
+  }
+</style>
+<footer class="footer">
+  <section class="container">
+    &copy; {{ now.Year }} <b>{{ .Site.Params.author }}</b>
+
+    <br style="line-height: 8px;" />
+
+    <p class="site-disclaimer">
+      {{ with .Site.Params.social }}
+        {{ $len := sub (len .) 1 }}
+        {{ range $i, $e := sort . }}
+          <a href="{{ $e.url }}" target="_blank">{{ $e.name }}</a>{{ if lt $i $len }}&nbsp;|{{ end }}
+        {{ end }}
+      {{ end }}
+    </p>
+    <p class="site-disclaimer">
+      Built with Hugo and a customized Personal-Website theme.
+      <br />
+      No trackers, no ads, and no paywall.
+    </p>
+  </section>
+</footer>

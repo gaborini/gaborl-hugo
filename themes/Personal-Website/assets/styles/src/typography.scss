@@ -1,0 +1,195 @@
+@use "sass:color";
+
+@use "_vars.scss";
+@use "_responsive.scss";
+
+//
+// Headings
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: vars.$color-heading;
+  font-weight: 600;
+  margin: 3.2rem 0 1.4rem 0;
+  letter-spacing: 0.024em;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.6em;
+}
+h4 {
+  font-size: 1.4em;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1em;
+}
+
+@include responsive.max-md() {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  h5 {
+    font-size: 1.2em;
+  }
+  h6 {
+    font-size: 1em;
+  }
+}
+
+//
+// Body text
+//
+
+a {
+  font-weight: 600;
+  color: vars.$color-link;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    color: vars.$color-link-active;
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin: 1.8rem 0;
+  text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.05);
+}
+
+blockquote:not(.alert) {
+  border-left: 2px solid vars.$color-quote;
+  padding-left: 1.6rem;
+  font-style: italic;
+
+  p {
+    color: vars.$color-quote;
+  }
+}
+
+//
+// ALERT BLOCKQUOTES
+//
+
+blockquote.alert {
+  padding: 0;
+  border: 2px solid vars.$color-quote;
+  background: vars.$color-code-bg;
+  border-radius: 1.4rem;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+
+  margin: 1rem -3.2rem;
+
+  .alert-heading {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    background-color: vars.$color-quote;
+    border-radius: 1.2rem 1.2rem 0 0;
+  }
+
+  .alert-heading-emoji {
+    margin: 0.4rem 0;
+    width: 3.2rem;
+    text-align: center;
+  }
+
+  .alert-heading-text {
+    margin: 0.4rem 0;
+  }
+
+  > p {
+    padding: 1.6rem 3.2rem;
+    margin: 0;
+  }
+
+  @include responsive.max-md {
+    margin: 1rem -1.6rem;
+    .alert-heading-emoji {
+      width: 2.8rem;
+    }
+    > p {
+      padding: 1.2rem;
+    }
+  }
+}
+
+$alert-accents: (
+  tip: #388e3c,
+  note: #1976d2,
+  info: #244c91,
+  warning: #ffb700,
+  caution: #ff7b00,
+  danger: #d32f2f,
+);
+@each $name, $accent in $alert-accents {
+  blockquote.alert-#{$name} {
+    border: 2px solid color.mix(white, $accent, 70%);
+    background: color.mix(white, $accent, 90%);
+
+    .alert-heading {
+      background: color.mix(white, $accent, 70%);
+      color: #222;
+      font-weight: bold;
+    }
+  }
+}
+
+//
+// Code
+//
+
+pre {
+  padding: 2.4rem 2rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 2.4rem -2rem;
+
+  @include responsive.max-md() {
+    margin: 2.4rem 0;
+  }
+}
+
+code {
+  color: vars.$color-code-text;
+  background-color: vars.$color-code-bg;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+.highlight {
+  line-height: 1.6;
+
+  code {
+    color: unset;
+    background-color: unset;
+    padding: 0;
+    font-weight: 400;
+  }
+}

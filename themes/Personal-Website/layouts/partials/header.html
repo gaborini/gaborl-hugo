@@ -1,0 +1,29 @@
+<script>
+  function toggleMenu() {
+    const x = document.getElementById("topnav-items");
+    console.log(x);
+    if (x.className === "topnav-list") {
+      x.className += " navopen";
+    } else {
+      x.className = "topnav-list";
+    }
+  }
+</script>
+<section class="container">
+  <nav class="topnav">
+    <a class="topnav-title" href="{{ .Site.BaseURL }}">
+      {{ .Site.Title }}
+    </a>
+    {{ with .Site.Menus.main }}
+      <a href="javascript:void(0);" class="mobilemenu" onclick="toggleMenu()">Menu</a>
+      <ul id="topnav-items" class="topnav-list">
+        {{ range sort . }}
+          <li class="topnav-item">
+            <a class="topnav-link" href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
+  </nav>
+</section>

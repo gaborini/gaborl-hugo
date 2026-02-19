@@ -1,0 +1,72 @@
+baseurl = "https://lucianonooijen.com"
+title = "Luciano Nooijen"
+languageCode = "en"
+timeZone = "Europe/Athens"
+
+canonifyurls = true # Enable to turn relative URLs into absolute.
+
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+
+[markup.goldmark.parser.attribute]
+block = true
+
+[markup.goldmark.extensions]
+table = true
+footnote = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+    author = "Luciano Nooijen"
+    info = "Software, Gamedev, Sourdough, Philosophy, History"
+    description = "My name is Luciano Nooijen, freelance software engineer and lifelong learner"
+    keywords = "luciano nooijen, luciano, nooijen"
+
+[[params.social]]
+    name = "Email"
+    weight = 1
+    url = "/contact"
+[[params.social]]
+    name = "Github"
+    weight = 2
+    url = "https://github.com/lucianonooijen/"
+[[params.social]]
+    name = "Twitter"
+    weight = 3
+    url = "https://x.com/LucianoNooijen"
+[[params.social]]
+    name = "LinkedIn"
+    weight = 4
+    url = "https://www.linkedin.com/in/lucianonooijen/"
+[[params.social]]
+    name = "YouTube"
+    weight = 5
+    url = "https://www.youtube.com/@LucianoNooijen"
+
+# Menu links
+[[menu.main]]
+    name = "About"
+    weight = 1
+    url  = "/about/"
+[[menu.main]]
+    name = "Expertise"
+    weight = 2
+    url = "/expertise/"
+[[menu.main]]
+    name = "Experience"
+    weight = 3
+    url = "/experience/"
+[[menu.main]]
+    name = "Blog"
+    weight = 4
+    url = "/blog/"
+[[menu.main]]
+    name = "Contact"
+    weight = 5
+    url = "/contact/"

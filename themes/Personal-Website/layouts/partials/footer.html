@@ -1,0 +1,65 @@
+<style>
+  .footer {
+    line-height: 4rem;
+    width: 100%;
+    text-align: center;
+    line-height: 1.8em;
+    margin-bottom: 40px !important;
+    font-size: 1.4rem;
+  }
+  .ai-disclaimer {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .site-disclaimer {
+    font-size: 10px;
+    line-height: 1.4;
+    margin: 0 0 1rem;
+  }
+</style>
+<footer class="footer">
+  <section class="container">
+    <p class="ai-disclaimer">
+      <i
+        >All content on this website is handwritten.
+        <br />
+        This website does not contain AI-generated content.</i
+      >
+    </p>
+
+    <br style="line-height: 0;" />
+
+    &copy;
+    <script>
+      document.write(`${new Date().getFullYear()} <b>Luciano Nooijen</b>`);
+    </script>
+
+    <br style="line-height: 8px;" />
+
+    <p class="site-disclaimer">
+      {{ with .Site.Params.social }}
+        {{ $len := sub (len .) 1 }}
+        {{ range $i, $e := sort . }}
+          <a href="{{ $e.url }}" target="_blank">{{ $e.name }}</a>{{ if lt $i $len }}&nbsp;|{{ end }}
+        {{ end }}
+      {{ end }}
+    </p>
+    <p class="site-disclaimer">
+      This website is built in a way the internet was meant to be.
+      <br />
+      This means a simple, content-first website, sharing thoughts and knowledge for free.
+      <br />
+      This is why this website has no trackers, no ads and no requirement to run <span id="javascript-text">Javascript</span>.
+    </p>
+    <p class="site-disclaimer">Posts: CC-BY-SA | Source code: AGPL-3.0</p>
+  </section>
+</footer>
+
+<script>
+  const jsText = document.querySelector("#javascript-text")
+  jsText.addEventListener("dblclick", e => {
+    const style = document.createElement("style");
+    style.innerHTML = "* { font-family: 'Comic Sans MS', 'Comic Sans', 'Noto Sans Mono', monospace !important; }";
+    document.head.appendChild(style);
+  })
+</script>

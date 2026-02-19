@@ -1,0 +1,9 @@
+{
+  "buildCommand": "if [ \"$VERCEL_ENV\" = \"production\" ] || [ -z \"$VERCEL_URL\" ]; then hugo --gc --minify; else hugo --gc --minify --baseURL \"https://$VERCEL_URL/\"; fi",
+  "outputDirectory": "public",
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.147.5"
+    }
+  }
+}

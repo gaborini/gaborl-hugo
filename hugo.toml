@@ -1,0 +1,74 @@
+baseURL = "https://gaborl.hu/"
+title = "Gabor's Lab Notes"
+languageCode = "en"
+timeZone = "America/New_York"
+theme = "Personal-Website"
+canonifyURLs = true
+enableRobotsTXT = true
+ignoreFiles = ["^themes/Personal-Website/content/"]
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[permalinks]
+blog = "/blog/:slug/"
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+
+[markup.goldmark.parser.attribute]
+block = true
+
+[markup.goldmark.extensions]
+table = true
+footnote = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+author = "Gabor L."
+info = "Arduino, Raspberry Pi, Rust, and practical maker projects"
+description = "Personal engineering notes on Arduino, Raspberry Pi, Rust programming, and embedded systems."
+keywords = "arduino, raspberry pi, rust, embedded, electronics, linux"
+
+[[params.social]]
+name = "Contact"
+weight = 1
+url = "/contact/"
+
+[[params.social]]
+name = "GitHub"
+weight = 2
+url = "https://github.com/"
+
+[[params.social]]
+name = "RSS"
+weight = 3
+url = "/blog/index.xml"
+
+[[menu.main]]
+name = "About"
+weight = 1
+url = "/about/"
+
+[[menu.main]]
+name = "Projects"
+weight = 2
+url = "/projects/"
+
+[[menu.main]]
+name = "Learning"
+weight = 3
+url = "/learning/"
+
+[[menu.main]]
+name = "Blog"
+weight = 4
+url = "/blog/"
+
+[[menu.main]]
+name = "Contact"
+weight = 5
+url = "/contact/"

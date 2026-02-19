@@ -1,0 +1,13 @@
+{{ define "title" }}
+  {{ .Title }} ·
+  {{ .Site.Title }}
+{{ end }}
+
+{{ define "content" }}
+  {{ if eq .Type "blog" }}
+    {{ partial "post.html" . }}
+  {{ else }}
+    {{ partial "page.html" . }}
+  {{ end }}
+
+{{ end }}

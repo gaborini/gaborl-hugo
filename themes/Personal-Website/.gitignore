@@ -1,0 +1,9 @@
+.hugo_build.lock
+.vscode/
+hugo/
+public/
+build/
+resources/_gen/
+node_modules/
+.DS_Store
+.vercel

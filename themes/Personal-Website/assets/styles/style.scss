@@ -1,0 +1,14 @@
+// Start new code
+@use "normalize.scss";
+
+@use "src/_vars.scss"; // Variables
+@use "src/base.scss"; // Base styles, including layout etc.
+@use "src/typography.scss"; // Typography setup
+
+@use "src/navigation.scss"; // Navbar styling
+@use "src/table.scss"; // Tables styling
+@use "src/list.scss"; // Styles for list page
+@use "src/post.scss"; // Blogpost specific code
+
+@use "src/misc.scss"; // Misc styling for specific blocks etc
+// End new code
