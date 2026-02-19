@@ -1,5 +1,5 @@
 {
-  "buildCommand": "if [ -n \"$VERCEL_PROJECT_PRODUCTION_URL\" ]; then BASE_URL=\"https://$VERCEL_PROJECT_PRODUCTION_URL/\"; elif [ -n \"$VERCEL_URL\" ]; then BASE_URL=\"https://$VERCEL_URL/\"; else BASE_URL=\"https://gaborl-hugo.vercel.app/\"; fi; hugo --gc --minify --baseURL \"$BASE_URL\"",
+  "buildCommand": "./scripts/vercel-build.sh",
   "outputDirectory": "public",
   "build": {
     "env": {

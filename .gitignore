@@ -4,3 +4,4 @@ resources/
 .DS_Store
 node_modules/
 themes/Personal-Website/node_modules/
+.vercel
