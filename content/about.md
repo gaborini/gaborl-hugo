@@ -4,7 +4,9 @@ title = "About"
 
 I am Gabor, a software-and-hardware builder with a strong soft spot for nerdy systems that are both useful and a little strange.
 
-![From Commodore 64 to modern edge systems](/images/about/commodore64-lab.svg)
+![My first computer: Commodore 64](/images/about/commodore64-photo.jpg)
+
+*Photo: Commodore 64 (1984 ca.) by [Sailko](https://commons.wikimedia.org/wiki/User:Sailko), licensed [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Commodore_64,_personal_computer,_1982_(1984_ca.).jpg).*
 
 My first machine was a **Commodore 64**, and that early "READY." prompt still defines how I think:
 keep things understandable, make experiments runnable, and learn by building.
