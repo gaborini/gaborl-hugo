@@ -3,7 +3,7 @@ title = "Gabor's Lab Notes"
 languageCode = "en"
 timeZone = "America/New_York"
 theme = "Personal-Website"
-canonifyURLs = true
+canonifyURLs = false
 enableRobotsTXT = true
 ignoreFiles = ["^themes/Personal-Website/content/"]
 
