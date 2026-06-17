@@ -15,50 +15,36 @@ h5,
 h6 {
   color: vars.$color-heading;
   font-weight: 600;
-  margin: 3.2rem 0 1.4rem 0;
-  letter-spacing: 0.024em;
-  line-height: 1.1;
+  margin: 2.8rem 0 1rem 0;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
 }
 
 h1 {
-  font-size: 2.4em;
+  font-size: 3rem;
   font-weight: 700;
 }
 h2 {
-  font-size: 2em;
+  font-size: 2.25rem;
 }
 h3 {
-  font-size: 1.6em;
+  font-size: 1.75rem;
 }
 h4 {
-  font-size: 1.4em;
+  font-size: 1.45rem;
 }
 h5 {
-  font-size: 1.2em;
+  font-size: 1.25rem;
 }
 h6 {
-  font-size: 1em;
+  font-size: 1.1rem;
 }
 
 @include responsive.max-md() {
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.8em;
-  }
-  h3 {
-    font-size: 1.6em;
-  }
-  h4 {
-    font-size: 1.4em;
-  }
-  h5 {
-    font-size: 1.2em;
-  }
-  h6 {
-    font-size: 1em;
-  }
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 1.95rem; }
+  h3 { font-size: 1.6rem; }
+  h4 { font-size: 1.35rem; }
 }
 
 //
@@ -160,18 +146,20 @@ $alert-accents: (
 //
 
 pre {
-  padding: 1.8rem 1.6rem;
+  padding: 1.6rem 1.4rem;
   white-space: pre-wrap;
   word-wrap: break-word;
-  margin: 2rem -1.2rem;
+  margin: 2rem -0.8rem;
   background: #0f172a;
   border: 1px solid vars.$color-border;
   border-radius: 8px;
   overflow-x: auto;
+  font-size: 0.92rem;
 
   @include responsive.max-md() {
-    margin: 1.8rem -0.6rem;
-    padding: 1.4rem 1rem;
+    margin: 1.6rem -0.4rem;
+    padding: 1.2rem 0.9rem;
+    font-size: 0.85rem;
   }
 }
 

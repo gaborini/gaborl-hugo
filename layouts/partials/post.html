@@ -1,40 +1,37 @@
 <section class="container">
   <article class="blogpost">
     <header>
-      <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.2rem;">
-        <div style="width:22px; height:2px; background: linear-gradient(to right, #fb923c, #22d3ee); border-radius:1px;"></div>
-        <span style="font-size:0.78rem; letter-spacing:0.06em; color:#64748b; text-transform:uppercase;">Lab Note</span>
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+        <div style="width:28px; height:2px; background: linear-gradient(to right, #fb923c, #22d3ee); border-radius:2px;"></div>
+        <span style="font-size:0.8rem; letter-spacing:0.08em; color:#64748b; text-transform:uppercase; font-weight:500;">Lab Note</span>
       </div>
       <h1 class="title">{{ .Title }}</h1>
-      <h2 class="date">{{ .Date.Format "January 2, 2006" }}</h2>
-      <p style="margin-bottom: 0">
-        <b>Reading time</b>:
-        {{ if eq .ReadingTime 1 }}
-          1 minute
-        {{ else }}
-          {{ .ReadingTime }} minutes
-        {{ end }}
-      </p>
-      <p style="margin-bottom: 0; margin-top: 0;">
-        {{ with .GetTerms "categories" }}
-          <b>Categories:</b>
+      <div style="display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; color:#64748b; font-size:0.95rem;">
+        <div>{{ .Date.Format "January 2, 2006" }}</div>
+        <div>
+          {{ if eq .ReadingTime 1 }}1 minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}
+        </div>
+      </div>
+      {{ with .GetTerms "categories" }}
+        <div style="margin-top:0.6rem; font-size:0.85rem;">
+          <strong style="color:#94a3b8;">Categories:</strong> 
           {{ $categories := slice }}
           {{ range . }}
             {{ $categories = $categories | append (printf `<a href="%s">%s</a>` .RelPermalink .LinkTitle) }}
           {{ end }}
           {{ delimit $categories ", " | safeHTML }}
-        {{ end }}
-      </p>
-      <p style="margin-top: 0">
-        {{ with .GetTerms "tags" }}
-          <b>Tags:</b>
+        </div>
+      {{ end }}
+      {{ with .GetTerms "tags" }}
+        <div style="margin-top:0.25rem; font-size:0.85rem;">
+          <strong style="color:#94a3b8;">Tags:</strong> 
           {{ $tags := slice }}
           {{ range . }}
             {{ $tags = $tags | append (printf `<a href="%s">%s</a>` .RelPermalink .LinkTitle) }}
           {{ end }}
           {{ delimit $tags ", " | safeHTML }}
-        {{ end }}
-      </p>
+        </div>
+      {{ end }}
     </header>
 
     <div class="post-content">
@@ -43,16 +40,14 @@
 
     <hr class="endofpost" />
 
-    <p style="text-align: center;">
-      <i>
-        Questions or feedback about this article?
-        <br />
-        Reach out through the <a href="/contact/">contact page</a>.
-        <br />
-        <br />
-        If you like these posts, subscribe to the <a href="/blog/index.xml" target="_blank">RSS feed</a>.
-      </i>
-    </p>
+    <div style="text-align:center; max-width: 520px; margin: 0 auto; padding: 1rem 0;">
+      <p style="font-size:0.95rem; color:#94a3b8; margin-bottom:0.8rem;">
+        Questions or feedback? Reach out via the <a href="/contact/">contact page</a>.
+      </p>
+      <p style="margin:0;">
+        <a href="/blog/index.xml" target="_blank" class="btn" style="font-size:0.85rem;">Subscribe via RSS</a>
+      </p>
+    </div>
 
     <hr class="endofpost" />
   </article>

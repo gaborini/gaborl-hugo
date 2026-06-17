@@ -2,7 +2,7 @@
 @use "_responsive.scss";
 
 article.blogpost {
-  max-width: vars.$blogpost-width;
+  max-width: 78rem;
   margin-left: auto;
   margin-right: auto;
 
@@ -12,41 +12,59 @@ article.blogpost {
   text-rendering: optimizelegibility !important;
 }
 
-.post-content {
-  margin-top: 2.8rem;
-
-  img {
-    width: 88%;
-    margin: 1.8rem 6%;
-    box-shadow: 0 10px 15px -4px rgb(0 0 0 / 0.3);
-  }
-
-  .highlight {
-    font-size: 0.82em;
-    line-height: 1.5;
-  }
-
-  @include responsive.max-md() {
-    .post-content {
-      margin-top: 1.6rem;
-    }
-    .highlight {
-      font-size: 0.75em;
-    }
-  }
+.blogpost header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid vars.$color-border;
+  padding-bottom: 1.4rem;
 }
 
 .blogpost header h1.title {
-  font-size: 2.05rem;
-  margin-bottom: 0.2rem;
+  font-size: 2.6rem;
+  margin: 0 0 0.4rem;
+  line-height: 1.15;
 }
 
 .blogpost header h2.date {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: vars.$color-muted;
-  margin-top: 0.1rem;
-  margin-bottom: 0.6rem;
+  margin: 0;
   font-weight: 400;
+}
+
+.post-content {
+  margin-top: 1.8rem;
+  font-size: 1.05rem;        /* slightly larger body in posts */
+  line-height: 1.78;
+
+  p, ul, ol {
+    margin: 1.35rem 0;
+  }
+
+  img {
+    width: 92%;
+    margin: 2rem 4%;
+    box-shadow: 0 10px 15px -4px rgb(0 0 0 / 0.3);
+    border-radius: 6px;
+  }
+
+  .highlight {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  code {
+    font-size: 0.92em;
+  }
+
+  @include responsive.max-md() {
+    font-size: 1rem;
+    line-height: 1.7;
+
+    img {
+      width: 100%;
+      margin: 1.4rem 0;
+    }
+  }
 }
 
 .endofpost {

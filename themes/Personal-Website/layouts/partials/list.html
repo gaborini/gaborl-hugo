@@ -1,16 +1,16 @@
 <section class="container list">
   <h1 class="title">{{ .Title }}</h1>
-  <p style="color:#94a3b8; margin-top:0.3rem;">Raw notes &amp; retrospectives • <a href="/blog/index.xml" target="_blank">RSS</a></p>
+  <p style="color:#94a3b8; margin:0.2rem 0 1.6rem; font-size:1rem;">Raw engineering notes &amp; retrospectives • <a href="/blog/index.xml" target="_blank">RSS feed</a></p>
 
   {{ if eq .Section "blog" }}
-  <div style="margin: 1.1rem 0 0.6rem; font-size:0.85rem;">
-    <span style="color:#64748b;">Categories:</span>
-    <a href="/blog" style="margin-left:0.35rem;">all</a>
+  <div style="margin-bottom: 1.4rem; font-size:0.9rem; color:#64748b;">
+    <strong style="color:#cbd5e1;">Categories:</strong>
+    <a href="/blog" style="margin-left:0.5rem;">all</a>
     {{ $categories := slice }}
     {{ range site.Taxonomies.categories.Alphabetical }}
       {{ $term := .Term }}
       {{ $url := printf "/categories/%s/" $term | urlize }}
-      {{ $categories = $categories | append (printf ` <span style="color:#475569;">·</span> <a href="%s">%s</a>` $url $term) }}
+      {{ $categories = $categories | append (printf ` <span style="opacity:0.5;">·</span> <a href="%s">%s</a>` $url $term) }}
     {{ end }}
     {{ delimit $categories "" | safeHTML }}
   </div>
@@ -18,7 +18,10 @@
 
   <ul>
     {{ range .Pages }}
-      <li><span>{{ .Date.Format "Jan 02, 2006" }}</span><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      <li>
+        <span>{{ .Date.Format "Jan 02, 2006" }}</span>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
     {{ end }}
   </ul>
 </section>
