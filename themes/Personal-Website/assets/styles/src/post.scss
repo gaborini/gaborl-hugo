@@ -13,35 +13,49 @@ article.blogpost {
 }
 
 .post-content {
-  margin-top: 64px;
+  margin-top: 2.8rem;
 
   img {
-    width: 80%;
-    margin-left: 10%;
+    width: 88%;
+    margin: 1.8rem 6%;
+    box-shadow: 0 10px 15px -4px rgb(0 0 0 / 0.3);
   }
 
   .highlight {
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 0.82em;
+    line-height: 1.5;
   }
 
   @include responsive.max-md() {
     .post-content {
-      margin-top: 36px;
+      margin-top: 1.6rem;
     }
     .highlight {
-      font-size: 12px;
+      font-size: 0.75em;
     }
   }
 }
 
+.blogpost header h1.title {
+  font-size: 2.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.blogpost header h2.date {
+  font-size: 0.95rem;
+  color: vars.$color-muted;
+  margin-top: 0.1rem;
+  margin-bottom: 0.6rem;
+  font-weight: 400;
+}
+
 .endofpost {
-  max-width: 400px;
+  max-width: 280px;
   margin: 3em auto 3.4em;
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #888;
+  border-top: 1px solid vars.$color-border;
   padding: 0;
 }
 

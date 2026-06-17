@@ -43,5 +43,43 @@
 
       {{ partial "footer.html" . }}
     </main>
+
+    <script>
+      // Sticky nav scroll effect + active link highlight
+      (function() {
+        const nav = document.getElementById('topnav');
+        if (nav) {
+          const onScroll = () => {
+            if (window.scrollY > 20) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+          };
+          window.addEventListener('scroll', onScroll, { passive: true });
+          onScroll();
+        }
+
+        // Reveal on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window && reveals.length) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+              if (e.isIntersecting) {
+                e.target.classList.add('is-visible');
+                io.unobserve(e.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
+          reveals.forEach(el => io.observe(el));
+        } else {
+          reveals.forEach(el => el.classList.add('is-visible'));
+        }
+
+        // Close mobile nav on link click
+        const mobileLinks = document.querySelectorAll('#topnav-items .topnav-link');
+        mobileLinks.forEach(a => a.addEventListener('click', () => {
+          const list = document.getElementById('topnav-items');
+          if (list) list.className = 'topnav-list';
+        }));
+      })();
+    </script>
   </body>
 </html>

@@ -1,20 +1,28 @@
 //
-// Colours
+// Colours - Modern dark tech lab aesthetic
 //
-$color-bg: #efebe0;
+$color-bg: #0b0f19;
+$color-surface: #121826;
+$color-surface-2: #1a2233;
+$color-border: #2a3346;
 
-$color-text: #2e2b26;
-$color-heading: #2e2b26;
+$color-text: #d1d5db;
+$color-heading: #f1f5f9;
+$color-muted: #64748b;
 
-$color-link: #8b4513;
-$color-link-active: #cd4416;
+$color-link: #fb923c;
+$color-link-active: #fdba74;
 
-$color-code-text: #223244;
-$color-code-bg: #dadada;
+$color-code-text: #c7d2fe;
+$color-code-bg: #1e2937;
 
-$color-quote: #666;
+$color-quote: #64748b;
 
-//
+$accent: #fb923c;
+$accent-cyan: #22d3ee;
+$accent-green: #4ade80;
+
+// 
 // Widths
 //
 $container-max-width: 120rem;

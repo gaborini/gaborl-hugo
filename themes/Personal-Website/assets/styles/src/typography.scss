@@ -73,23 +73,18 @@ a {
   &:focus,
   &:hover {
     color: vars.$color-link-active;
-    text-decoration: underline;
   }
 }
 
 p {
-  margin: 1.8rem 0;
-  text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.05);
+  margin: 1.6rem 0;
 }
 
 blockquote:not(.alert) {
-  border-left: 2px solid vars.$color-quote;
-  padding-left: 1.6rem;
+  border-left: 3px solid vars.$accent;
+  padding-left: 1.5rem;
   font-style: italic;
-
-  p {
-    color: vars.$color-quote;
-  }
+  color: #a3bffa;
 }
 
 //
@@ -140,22 +135,22 @@ blockquote.alert {
 }
 
 $alert-accents: (
-  tip: #388e3c,
-  note: #1976d2,
-  info: #244c91,
-  warning: #ffb700,
-  caution: #ff7b00,
-  danger: #d32f2f,
+  tip: #166534,
+  note: #1e40af,
+  info: #1e3a8a,
+  warning: #854d0e,
+  caution: #9a3412,
+  danger: #991b1b,
 );
 @each $name, $accent in $alert-accents {
   blockquote.alert-#{$name} {
-    border: 2px solid color.mix(white, $accent, 70%);
-    background: color.mix(white, $accent, 90%);
+    border: 1px solid #334155;
+    background: #111827;
 
     .alert-heading {
-      background: color.mix(white, $accent, 70%);
-      color: #222;
-      font-weight: bold;
+      background: #{ $accent };
+      color: #f8fafc;
+      font-weight: 600;
     }
   }
 }
@@ -165,13 +160,18 @@ $alert-accents: (
 //
 
 pre {
-  padding: 2.4rem 2rem;
+  padding: 1.8rem 1.6rem;
   white-space: pre-wrap;
   word-wrap: break-word;
-  margin: 2.4rem -2rem;
+  margin: 2rem -1.2rem;
+  background: #0f172a;
+  border: 1px solid vars.$color-border;
+  border-radius: 8px;
+  overflow-x: auto;
 
   @include responsive.max-md() {
-    margin: 2.4rem 0;
+    margin: 1.8rem -0.6rem;
+    padding: 1.4rem 1rem;
   }
 }
 
@@ -180,11 +180,17 @@ code {
   background-color: vars.$color-code-bg;
   font-family: "Anonymous Pro", monospace;
   font-weight: 500;
-  padding: 4px 8px;
+  padding: 3px 7px;
+  border-radius: 4px;
 }
 
 .highlight {
-  line-height: 1.6;
+  line-height: 1.55;
+  margin: 1.8rem -0.6rem;
+
+  pre {
+    margin: 0;
+  }
 
   code {
     color: unset;

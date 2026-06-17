@@ -1,7 +1,6 @@
 <script>
   function toggleMenu() {
     const x = document.getElementById("topnav-items");
-    console.log(x);
     if (x.className === "topnav-list") {
       x.className += " navopen";
     } else {
@@ -10,7 +9,7 @@
   }
 </script>
 <section class="container">
-  <nav class="topnav">
+  <nav class="topnav" id="topnav">
     <a class="topnav-title" href="{{ .Site.BaseURL }}">
       {{ .Site.Title }}
     </a>
@@ -24,6 +23,5 @@
         {{ end }}
       </ul>
     {{ end }}
-
   </nav>
 </section>

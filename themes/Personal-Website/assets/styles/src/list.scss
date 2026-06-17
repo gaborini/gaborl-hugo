@@ -2,9 +2,13 @@
 @use "_responsive.scss";
 
 .list {
+  h1.title {
+    font-size: 2rem;
+  }
+
   ul {
     list-style: none;
-    margin: 4rem 0;
+    margin: 2.8rem 0 3rem;
     padding: 0;
 
     li {
@@ -12,19 +16,33 @@
       justify-content: space-between;
       align-items: center;
       flex-direction: row-reverse;
-      padding: 0.4rem 0;
-      border-bottom: 1px solid #bbb;
+      padding: 0.85rem 1.1rem;
+      border-radius: 6px;
+      margin-bottom: 2px;
+      transition: background 0.12s ease;
+
+      &:hover {
+        background: vars.$color-surface;
+      }
 
       span {
         display: block;
         width: 100%;
-        max-width: 20rem;
-        margin-left: 3rem;
+        max-width: 17rem;
+        margin-left: 2rem;
+        font-size: 0.82rem;
+        color: vars.$color-muted;
+        font-feature-settings: "tnum";
       }
 
       a {
         color: vars.$color-text;
-        line-height: 1.1;
+        line-height: 1.25;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: vars.$accent;
       }
     }
 
@@ -32,12 +50,12 @@
       li {
         flex-direction: column;
         align-items: flex-start;
-        border-bottom: none;
-        padding: 0.6rem 0;
+        padding: 0.85rem 0.6rem;
 
         span {
           margin-left: 0;
-          font-size: 1.2rem;
+          margin-bottom: 0.1rem;
+          font-size: 0.78rem;
         }
       }
     }

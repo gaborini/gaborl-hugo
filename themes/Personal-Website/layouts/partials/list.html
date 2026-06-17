@@ -1,21 +1,24 @@
 <section class="container list">
   <h1 class="title">{{ .Title }}</h1>
-  <p>Posts are also available as an <a href="/blog/index.xml" target="_blank">RSS feed</a>.</p>
-  <p style="text-align: center;">
-    <b>Categories: </b>
-    <a href="/blog"><i>all</i></a>
-    <br />
+  <p style="color:#94a3b8; margin-top:0.3rem;">Raw notes &amp; retrospectives • <a href="/blog/index.xml" target="_blank">RSS</a></p>
+
+  {{ if eq .Section "blog" }}
+  <div style="margin: 1.1rem 0 0.6rem; font-size:0.85rem;">
+    <span style="color:#64748b;">Categories:</span>
+    <a href="/blog" style="margin-left:0.35rem;">all</a>
     {{ $categories := slice }}
     {{ range site.Taxonomies.categories.Alphabetical }}
       {{ $term := .Term }}
       {{ $url := printf "/categories/%s/" $term | urlize }}
-      {{ $categories = $categories | append (printf `<a href="%s">%s</a>` $url $term) }}
+      {{ $categories = $categories | append (printf ` <span style="color:#475569;">·</span> <a href="%s">%s</a>` $url $term) }}
     {{ end }}
-    {{ delimit $categories " | " | safeHTML }}
-  </p>
+    {{ delimit $categories "" | safeHTML }}
+  </div>
+  {{ end }}
+
   <ul>
     {{ range .Pages }}
-      <li><span>{{ .Date.Format "January 2, 2006" }}</span><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      <li><span>{{ .Date.Format "Jan 02, 2006" }}</span><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
   </ul>
 </section>

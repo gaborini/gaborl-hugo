@@ -2,27 +2,83 @@
 @use "_responsive.scss";
 
 //
-// Menu base
+// Menu base - Modern glass nav
 //
 
 .topnav {
-  height: 60px;
+  height: 68px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11, 15, 25, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid vars.$color-border;
+  transition: box-shadow 0.2s ease;
 }
+
+.topnav.scrolled {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
 .topnav-title {
-  color: vars.$color-text;
-  letter-spacing: 0;
+  color: vars.$color-heading;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-size: 1.15em;
+  text-decoration: none;
+  position: relative;
 }
+
+.topnav-title:hover {
+  color: vars.$accent;
+}
+
 .topnav-list {
   list-style: none;
   display: flex;
-  gap: 24px;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
 }
+
 .topnav-link {
   color: vars.$color-text;
   letter-spacing: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.topnav-link:hover {
+  color: vars.$accent;
+  background: rgba(251, 146, 60, 0.08);
+}
+
+.topnav-link::after {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 2px;
+  height: 1px;
+  background: vars.$accent;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.topnav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* active state hint */
+.topnav-item.active .topnav-link {
+  color: vars.$accent;
 }
 
 //
@@ -31,6 +87,10 @@
 
 .mobilemenu {
   display: none;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid vars.$color-border;
+  border-radius: 6px;
+  text-decoration: none;
 }
 
 @include responsive.max-md() {
@@ -43,25 +103,29 @@
     gap: 0;
   }
   .topnav-list.navopen {
-    display: block;
+    display: flex;
     position: absolute;
-    top: 60px;
-    right: 20px;
-    padding-left: 0 !important;
-
+    top: 68px;
+    right: 1rem;
+    padding: 0.5rem 0 !important;
     height: auto;
     text-align: right;
-    background-color: #ddd;
-    display: flex;
+    background: vars.$color-surface;
+    border: 1px solid vars.$color-border;
+    border-radius: 8px;
     flex-direction: column;
+    min-width: 180px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2);
   }
   .topnav-item {
-    display: inline-block;
-    border-top: solid 1px #999;
-    min-width: 200px;
-    padding: 12px 24px;
+    display: block;
+    padding: 0;
   }
-  .topnav-item:first-of-type {
-    border-top: none;
+  .topnav-link {
+    display: block;
+    padding: 12px 20px;
+  }
+  .topnav-link::after {
+    display: none;
   }
 }
