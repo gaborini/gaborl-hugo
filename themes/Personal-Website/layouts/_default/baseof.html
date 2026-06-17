@@ -57,28 +57,21 @@
           onScroll();
         }
 
-        // Reveal on scroll
+        // Subtle scroll reveals
         const reveals = document.querySelectorAll('.reveal');
         if ('IntersectionObserver' in window && reveals.length) {
           const io = new IntersectionObserver((entries) => {
             entries.forEach(e => {
               if (e.isIntersecting) {
-                e.target.classList.add('is-visible');
+                e.target.classList.add('visible');
                 io.unobserve(e.target);
               }
             });
-          }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
+          }, { threshold: 0.1 });
           reveals.forEach(el => io.observe(el));
         } else {
-          reveals.forEach(el => el.classList.add('is-visible'));
+          reveals.forEach(el => el.classList.add('visible'));
         }
-
-        // Close mobile nav on link click
-        const mobileLinks = document.querySelectorAll('#topnav-items .topnav-link');
-        mobileLinks.forEach(a => a.addEventListener('click', () => {
-          const list = document.getElementById('topnav-items');
-          if (list) list.className = 'topnav-list';
-        }));
       })();
     </script>
   </body>

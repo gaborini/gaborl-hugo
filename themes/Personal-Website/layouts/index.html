@@ -1,33 +1,44 @@
 {{ define "content" }}
-<div class="container" style="max-width: 680px; margin-top: 2rem;">
+<div class="container" style="max-width: 780px; padding-top: 2rem;">
 
-  <div style="margin-bottom: 3.5rem;">
-    <h1 style="font-size: 2.4rem; margin-bottom: 0.25rem;">{{ .Site.Params.author }}</h1>
-    <p style="font-size: 1.15rem; color: vars.$color-muted; margin-bottom: 1rem;">
+  <!-- Hero -->
+  <div style="margin-bottom: 4rem;">
+    <h1 style="font-size: 2.8rem; margin-bottom: 0.3rem; font-weight: 700;">{{ .Site.Params.author }}</h1>
+    <p style="font-size: 1.3rem; color: #6b665c; max-width: 520px;">
       {{ .Site.Params.info }}
     </p>
-    <p style="max-width: 36rem; line-height: 1.65;">
-      Personal notes on embedded systems, edge computing, Rust and building things that last.
-    </p>
+
+    <!-- Graphic icons -->
+    <div style="margin-top: 1.4rem; display: flex; gap: 0.8rem;">
+      <div class="tech-icon">Arduino</div>
+      <div class="tech-icon">RPi</div>
+      <div class="tech-icon">Rust</div>
+      <div class="tech-icon">Edge</div>
+    </div>
   </div>
 
-  <div>
-    <div style="margin-bottom: 0.6rem; font-size: 0.8rem; color: vars.$color-muted;">Recent notes</div>
+  <!-- Recent -->
+  <div style="margin-bottom: 2.5rem;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.8rem;">
+      <div style="font-size: 0.8rem; color: #6b665c; text-transform: uppercase; letter-spacing: 0.05em;">Recent notes</div>
+      <a href="/blog/" style="font-size: 0.9rem;">all →</a>
+    </div>
 
-    {{ range first 6 (where .Site.RegularPages "Type" "blog") }}
-      <a href="{{ .RelPermalink }}" class="post-link">
-        <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
-        <span>{{ .Title }}</span>
-      </a>
-    {{ end }}
+    <div class="recent-list">
+      {{ range first 7 (where .Site.RegularPages "Type" "blog") }}
+        <a href="{{ .RelPermalink }}" class="recent-item">
+          <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+          <span class="title">{{ .Title }}</span>
+        </a>
+      {{ end }}
+    </div>
   </div>
 
-  <div style="margin-top: 3rem; font-size: 0.95rem;">
-    <a href="/about/">About</a> · 
-    <a href="/projects/">Projects</a> · 
-    <a href="/learning/">Learning</a> · 
-    <a href="/contact/">Contact</a> · 
-    <a href="/blog/">All notes</a>
+  <div style="font-size: 0.95rem;">
+    <a href="/about/">About</a> &nbsp;·&nbsp; 
+    <a href="/projects/">Projects</a> &nbsp;·&nbsp; 
+    <a href="/learning/">Learning</a> &nbsp;·&nbsp; 
+    <a href="/contact/">Contact</a>
   </div>
 
 </div>

@@ -6,22 +6,24 @@
 //
 
 .topnav {
-  height: 58px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 50;
-  background: vars.$color-bg;
+  background: rgba(248,246,241,0.9);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid vars.$color-border;
 }
 
 .topnav-title {
   color: vars.$color-heading;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.05rem;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .topnav-title:hover {
@@ -31,19 +33,38 @@
 .topnav-list {
   list-style: none;
   display: flex;
-  gap: 1.6rem;
+  gap: 1.8rem;
   margin: 0;
   padding: 0;
 }
 
 .topnav-link {
   color: vars.$color-muted;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
 }
 
 .topnav-link:hover {
   color: vars.$color-text;
+}
+
+/* Animated underline on menu */
+.topnav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: vars.$accent;
+  transition: width 0.25s ease;
+}
+
+.topnav-link:hover::after,
+.topnav-link.active::after {
+  width: 100%;
 }
 
 /* active state hint */
@@ -57,12 +78,13 @@
 
 .mobilemenu {
   display: none;
+  padding: 4px 10px;
+  font-size: 0.9rem;
 }
 
 @include responsive.max-md() {
   .mobilemenu {
     display: block;
-    padding: 4px 8px;
   }
 
   .topnav-list {
@@ -70,14 +92,23 @@
   }
 
   .topnav-list.navopen {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 58px;
+    top: 60px;
     right: 1rem;
     background: vars.$color-surface;
     border: 1px solid vars.$color-border;
-    padding: 8px 0;
-    min-width: 160px;
+    border-radius: 6px;
+    padding: 6px 0;
+    min-width: 170px;
+    box-shadow: 0 8px 20px -8px rgba(0,0,0,0.1);
+    animation: slideDown 0.2s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .topnav-item {
@@ -86,6 +117,6 @@
 
   .topnav-link {
     display: block;
-    padding: 8px 16px;
+    padding: 9px 16px;
   }
 }
