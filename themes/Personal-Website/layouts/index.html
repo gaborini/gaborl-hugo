@@ -1,41 +1,63 @@
 {{ define "content" }}
-<div class="container" style="max-width: 720px; padding-top: 3rem;">
+<div class="container" style="max-width: 740px; padding-top: 2.8rem;">
 
-  <!-- Clean intro -->
-  <div style="margin-bottom: 5rem;">
-    <h1 style="font-size: 2.65rem; margin-bottom: 0.35rem; line-height: 1.1; font-weight: 600;">{{ .Site.Params.author }}</h1>
-    <p style="font-size: 1.25rem; color: #94a3b8; max-width: 38rem; margin-bottom: 1rem;">
-      {{ .Site.Params.info }}
-    </p>
-    <p style="max-width: 38rem; color: #cbd5e1; line-height: 1.7;">
-      Personal notes on embedded systems, edge computing, Rust, and building things that actually work.
-    </p>
-  </div>
-
-  <!-- Recent writing – clean list -->
-  <div style="margin-bottom: 3.5rem;">
-    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
-      <h2 style="margin: 0; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: #64748b;">Recent notes</h2>
-      <a href="/blog/" style="font-size: 0.9rem; color: #94a3b8;">All writing →</a>
+  <!-- Hero with graphic elements -->
+  <div style="margin-bottom: 4.8rem; position: relative;">
+    <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+      <div style="width: 42px; height: 2px; background: linear-gradient(to right, #8b5e3c, #4a6b6b);"></div>
+      <span style="font-size: 0.8rem; letter-spacing: 0.1em; color: #6b665c; text-transform: uppercase;">Gabor's Lab</span>
     </div>
 
-    <div>
+    <h1 style="font-size: 3.1rem; line-height: 1.05; margin-bottom: 0.4rem; font-weight: 700;">{{ .Site.Params.author }}</h1>
+
+    <p style="font-size: 1.35rem; color: #6b665c; max-width: 38rem;">
+      {{ .Site.Params.info }}
+    </p>
+
+    <div style="margin-top: 1.1rem; max-width: 36rem; color: #4a463f; line-height: 1.65;">
+      Handcrafted notes on building reliable systems with Arduino, Raspberry Pi, Rust and a lot of patience.
+    </div>
+
+    <!-- Graphic tech icons row with animation -->
+    <div style="margin-top: 1.8rem; display: flex; gap: 1.1rem; flex-wrap: wrap;">
+      <div class="graphic-icon" title="Arduino">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 19v-2M17 19v-2M7 5v-2M17 5v-2"/></svg>
+      </div>
+      <div class="graphic-icon" title="Raspberry Pi">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M7 7l10 10M17 7L7 17"/></svg>
+      </div>
+      <div class="graphic-icon" title="Rust">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="graphic-icon" title="Edge">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent notes -->
+  <div>
+    <div style="display:flex; align-items: center; justify-content: space-between; margin-bottom: 0.9rem;">
+      <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #6b665c;">Recent writing</div>
+      <a href="/blog/" style="font-size: 0.88rem;">View all →</a>
+    </div>
+
+    <div style="border-top: 1px solid #d9d4c8;">
       {{ range first 7 (where .Site.RegularPages "Type" "blog") }}
-        <a href="{{ .RelPermalink }}" style="display: block; padding: 0.7rem 0; text-decoration: none; color: inherit; border-top: 1px solid #1f2937;">
-          <span style="color: #64748b; font-size: 0.85rem; margin-right: 1.1rem;">{{ .Date.Format "2006-01-02" }}</span>
-          <span style="color: #e2e8f0;">{{ .Title }}</span>
+        <a href="{{ .RelPermalink }}" class="post-row">
+          <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+          <span class="post-title">{{ .Title }}</span>
         </a>
       {{ end }}
     </div>
   </div>
 
-  <!-- Minimal footer links -->
-  <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #1f2937; font-size: 0.95rem; color: #64748b;">
-    <a href="/about/" style="color: inherit; margin-right: 1.5rem;">About</a>
-    <a href="/projects/" style="color: inherit; margin-right: 1.5rem;">Projects</a>
-    <a href="/learning/" style="color: inherit; margin-right: 1.5rem;">Learning</a>
-    <a href="/contact/" style="color: inherit; margin-right: 1.5rem;">Contact</a>
-    <a href="/blog/index.xml" target="_blank" style="color: inherit;">RSS</a>
+  <div style="margin-top: 3.2rem; display: flex; gap: 1.4rem; flex-wrap: wrap; font-size: 0.95rem;">
+    <a href="/about/" class="btn">About</a>
+    <a href="/projects/" class="btn">Projects</a>
+    <a href="/learning/" class="btn">Learning</a>
+    <a href="/contact/" class="btn">Contact</a>
+    <a href="/blog/index.xml" class="btn" target="_blank">RSS</a>
   </div>
 
 </div>
