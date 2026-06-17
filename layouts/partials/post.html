@@ -1,35 +1,18 @@
 <section class="container">
   <article class="blogpost">
-    <header>
-      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
-        <div style="width:28px; height:2px; background: linear-gradient(to right, #fb923c, #22d3ee); border-radius:2px;"></div>
-        <span style="font-size:0.8rem; letter-spacing:0.08em; color:#64748b; text-transform:uppercase; font-weight:500;">Lab Note</span>
-      </div>
-      <h1 class="title">{{ .Title }}</h1>
-      <div style="display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center; color:#64748b; font-size:0.95rem;">
-        <div>{{ .Date.Format "January 2, 2006" }}</div>
-        <div>
-          {{ if eq .ReadingTime 1 }}1 minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}
-        </div>
+    <header style="margin-bottom: 2.5rem;">
+      <h1 class="title" style="margin-bottom: 0.6rem;">{{ .Title }}</h1>
+      <div style="color: #64748b; font-size: 0.95rem;">
+        {{ .Date.Format "January 2, 2006" }} 
+        {{ if .ReadingTime }} · {{ .ReadingTime }} min{{ end }}
       </div>
       {{ with .GetTerms "categories" }}
-        <div style="margin-top:0.6rem; font-size:0.85rem;">
-          <strong style="color:#94a3b8;">Categories:</strong> 
+        <div style="margin-top: 0.5rem; font-size: 0.85rem; color:#64748b;">
           {{ $categories := slice }}
           {{ range . }}
-            {{ $categories = $categories | append (printf `<a href="%s">%s</a>` .RelPermalink .LinkTitle) }}
+            {{ $categories = $categories | append (printf `<a href="%s" style="color:inherit;">%s</a>` .RelPermalink .LinkTitle) }}
           {{ end }}
-          {{ delimit $categories ", " | safeHTML }}
-        </div>
-      {{ end }}
-      {{ with .GetTerms "tags" }}
-        <div style="margin-top:0.25rem; font-size:0.85rem;">
-          <strong style="color:#94a3b8;">Tags:</strong> 
-          {{ $tags := slice }}
-          {{ range . }}
-            {{ $tags = $tags | append (printf `<a href="%s">%s</a>` .RelPermalink .LinkTitle) }}
-          {{ end }}
-          {{ delimit $tags ", " | safeHTML }}
+          {{ delimit $categories " · " | safeHTML }}
         </div>
       {{ end }}
     </header>
@@ -40,15 +23,9 @@
 
     <hr class="endofpost" />
 
-    <div style="text-align:center; max-width: 520px; margin: 0 auto; padding: 1rem 0;">
-      <p style="font-size:0.95rem; color:#94a3b8; margin-bottom:0.8rem;">
-        Questions or feedback? Reach out via the <a href="/contact/">contact page</a>.
-      </p>
-      <p style="margin:0;">
-        <a href="/blog/index.xml" target="_blank" class="btn" style="font-size:0.85rem;">Subscribe via RSS</a>
-      </p>
+    <div style="margin-top: 2rem; font-size: 0.9rem; color: #64748b; text-align: center;">
+      <a href="/blog/index.xml" target="_blank">Subscribe to RSS</a> · 
+      <a href="/contact/">Questions or feedback?</a>
     </div>
-
-    <hr class="endofpost" />
   </article>
 </section>

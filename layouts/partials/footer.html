@@ -2,18 +2,12 @@
   .footer {
     width: 100%;
     text-align: center;
-    line-height: 1.7;
-    margin: 2.5rem 0 2rem;
-    font-size: 1rem;
+    line-height: 1.6;
+    margin: 4rem 0 2.5rem;
+    font-size: 0.9rem;
     color: #64748b;
     border-top: 1px solid #1f2937;
-    padding-top: 1.8rem;
-  }
-  .site-disclaimer {
-    font-size: 0.78rem;
-    line-height: 1.5;
-    margin: 0.3rem 0;
-    opacity: 0.75;
+    padding-top: 1.6rem;
   }
   .footer a {
     color: #94a3b8;
@@ -21,19 +15,18 @@
 </style>
 <footer class="footer">
   <section class="container">
-    &copy; {{ now.Year }} <b style="color:#cbd5e1;">{{ .Site.Params.author }}</b>
+    &copy; {{ now.Year }} {{ .Site.Params.author }}
 
-    <p class="site-disclaimer">
-      {{ with .Site.Params.social }}
-        {{ $len := sub (len .) 1 }}
-        {{ range $i, $e := sort . }}
-          <a href="{{ $e.url }}" target="_blank">{{ $e.name }}</a>{{ if lt $i $len }} &nbsp;·&nbsp; {{ end }}
-        {{ end }}
+    <span style="margin: 0 0.6rem; opacity: 0.5;">·</span>
+
+    {{ with .Site.Params.social }}
+      {{ range $i, $e := sort . }}
+        <a href="{{ $e.url }}" target="_blank">{{ $e.name }}</a>{{ if lt $i (sub (len .) 1) }} <span style="opacity:0.4;">·</span> {{ end }}
       {{ end }}
-    </p>
-    <p class="site-disclaimer">
-      Built with Hugo • Dark lab edition<br>
-      No trackers • No ads • No paywall
-    </p>
+    {{ end }}
+
+    <div style="margin-top: 0.4rem; font-size: 0.78rem; opacity: 0.6;">
+      No trackers • No ads • Built with Hugo
+    </div>
   </section>
 </footer>

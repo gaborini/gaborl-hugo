@@ -64,9 +64,9 @@ img {
   justify-content: center;
 }
 
-/* Modern design system additions */
+/* Clean, elegant personal blog styles (inspired by award-winning minimalist sites) */
 .section {
-  padding: 3.8rem 0;
+  padding: 4rem 0;
 }
 
 .section + .section {
@@ -74,146 +74,65 @@ img {
 }
 
 .glass {
-  background: rgba(18, 24, 38, 0.85);
-  backdrop-filter: blur(12px);
+  background: rgba(18, 24, 38, 0.8);
+  backdrop-filter: blur(10px);
   border: 1px solid vars.$color-border;
 }
 
+/* Very subtle cards for lists only */
 .card {
-  background: vars.$color-surface;
-  border: 1px solid vars.$color-border;
-  border-radius: 10px;
-  padding: 2rem;
-  transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), 
-              box-shadow 0.2s cubic-bezier(0.23, 1, 0.32, 1),
-              border-color 0.2s ease;
+  background: transparent;
+  border: none;
+  padding: 0.6rem 0;
+  transition: color 0.15s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  border-color: vars.$accent;
+  color: vars.$accent;
 }
 
 .card-accent {
   position: relative;
 }
 
-.card-accent::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 3px;
-  background: linear-gradient(to bottom, vars.$accent, vars.$accent-cyan);
-  border-radius: 10px 0 0 10px;
-  transition: width 0.2s ease;
-}
-
-.card-accent:hover::before {
-  width: 5px;
-}
-
 .btn {
   display: inline-block;
-  padding: 0.9rem 2rem;
-  border-radius: 6px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  border: 1px solid vars.$accent;
-  color: vars.$color-text;
-  background: transparent;
-  transition: all 0.15s ease;
-  cursor: pointer;
+  color: vars.$accent;
+  transition: color 0.15s ease;
 }
 
 .btn:hover {
-  background: vars.$accent;
-  color: #0b0f19;
-  transform: translateY(-1px);
+  color: vars.$color-link-active;
+  text-decoration: underline;
 }
 
-.btn-primary {
-  background: vars.$accent;
-  color: #0b0f19;
-  border-color: vars.$accent;
-}
-
-.btn-primary:hover {
-  filter: brightness(1.1);
-  color: #0b0f19;
-  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.2);
-}
-
+/* Minimal pill tags, used sparingly */
 .pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 1rem;
-  border-radius: 9999px;
-  font-size: 0.85em;
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.78rem;
   background: vars.$color-surface-2;
-  border: 1px solid vars.$color-border;
-  margin: 0.25rem;
-  transition: all 0.2s ease;
+  border-radius: 3px;
+  color: vars.$color-muted;
+  margin-right: 0.35rem;
 }
 
-.pill:hover {
-  border-color: vars.$accent;
-  color: vars.$accent;
-  transform: translateY(-1px);
-}
-
-/* Scroll reveal */
+/* Scroll reveal - subtle */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s cubic-bezier(0.23, 1.0, 0.32, 1), 
-              transform 0.6s cubic-bezier(0.23, 1.0, 0.32, 1);
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Subtle grid / lab background effect on home */
-.lab-grid {
-  position: relative;
-  background-image: 
-    linear-gradient(rgba(251,146,60,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34,211,238,0.035) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-
-.lab-grid::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 30%, rgba(34,211,238,0.06) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-/* Animated underline for important headings */
-h1, .hero-title {
-  position: relative;
-}
-.hero-title::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 64px;
-  height: 2px;
-  background: linear-gradient(to right, vars.$accent, vars.$accent-cyan);
-  border-radius: 2px;
-  animation: accentGrow 1.2s ease forwards;
-}
-
-@keyframes accentGrow {
-  from { width: 0; }
-  to { width: 64px; }
-}
-
-/* Nice links */
+/* Clean links */
 a {
   transition: color 0.15s ease;
 }
@@ -229,58 +148,17 @@ a {
   color: #cbd5e1;
 }
 
-/* Split two-column layout (oszd fel) */
+/* Optional light split styles (kept minimal) */
 .split-layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 3.2rem;
-  align-items: start;
+  grid-template-columns: 240px 1fr;
+  gap: 2.5rem;
 }
 
-.sidebar {
-  position: sticky;
-  top: 90px;
-  padding-right: 1.6rem;
-  border-right: 1px solid vars.$color-border;
-}
-
-.sidebar h1 {
-  font-size: 2.15rem;
-  margin: 0 0 0.3rem;
-  line-height: 1.1;
-}
-
-.sidebar .tagline {
-  color: #94a3b8;
-  font-size: 1rem;
-  line-height: 1.35;
-  margin-bottom: 1.1rem;
-}
-
-.sidebar .bio {
-  font-size: 0.92rem;
-  color: #94a3b8;
-  line-height: 1.45;
-  margin-bottom: 1.5rem;
-}
-
-.sidebar-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem;
-}
-
-.sidebar-nav a {
-  display: block;
-  padding: 0.5rem 0;
-  color: vars.$color-text;
-  font-size: 1rem;
-  text-decoration: none;
-}
-
-.sidebar-nav a:hover {
-  color: vars.$accent;
-  transform: translateX(2px);
+@media (max-width: 860px) {
+  .split-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 .main-col {

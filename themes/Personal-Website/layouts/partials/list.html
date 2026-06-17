@@ -1,27 +1,16 @@
 <section class="container list">
   <h1 class="title">{{ .Title }}</h1>
-  <p style="color:#94a3b8; margin:0.2rem 0 1.6rem; font-size:1rem;">Raw engineering notes &amp; retrospectives • <a href="/blog/index.xml" target="_blank">RSS feed</a></p>
-
-  {{ if eq .Section "blog" }}
-  <div style="margin-bottom: 1.4rem; font-size:0.9rem; color:#64748b;">
-    <strong style="color:#cbd5e1;">Categories:</strong>
-    <a href="/blog" style="margin-left:0.5rem;">all</a>
-    {{ $categories := slice }}
-    {{ range site.Taxonomies.categories.Alphabetical }}
-      {{ $term := .Term }}
-      {{ $url := printf "/categories/%s/" $term | urlize }}
-      {{ $categories = $categories | append (printf ` <span style="opacity:0.5;">·</span> <a href="%s">%s</a>` $url $term) }}
-    {{ end }}
-    {{ delimit $categories "" | safeHTML }}
-  </div>
-  {{ end }}
 
   <ul>
     {{ range .Pages }}
-      <li>
-        <span>{{ .Date.Format "Jan 02, 2006" }}</span>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <li style="display: flex; gap: 1.4rem; padding: 0.7rem 0; border-top: 1px solid #1f2937;">
+        <span style="width: 92px; flex-shrink: 0; color: #64748b; font-size: 0.9rem;">{{ .Date.Format "2006-01-02" }}</span>
+        <a href="{{ .Permalink }}" style="color: #e2e8f0;">{{ .Title }}</a>
       </li>
     {{ end }}
   </ul>
+
+  <p style="margin-top: 2.5rem; color: #64748b; font-size: 0.9rem;">
+    <a href="/blog/index.xml" target="_blank">RSS feed</a>
+  </p>
 </section>

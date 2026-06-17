@@ -1,97 +1,42 @@
 {{ define "content" }}
-<div class="container" style="max-width: 1120px;">
-<div class="split-layout" style="padding-top: 1.4rem;">
-  <!-- LEFT: Sidebar / info column -->
-  <aside class="sidebar reveal">
-    <h1 style="margin-bottom:0.15rem; font-size:2.15rem;">{{ .Site.Params.author }}</h1>
-    <div class="tagline">{{ .Site.Params.info }}</div>
+<div class="container" style="max-width: 720px; padding-top: 3rem;">
 
-    <div class="bio">
-      Practical engineering notes on Arduino, Raspberry Pi, Rust, embedded systems &amp; edge reliability. 
-      Documented failures, architectures and real field fixes.
+  <!-- Clean intro -->
+  <div style="margin-bottom: 5rem;">
+    <h1 style="font-size: 2.65rem; margin-bottom: 0.35rem; line-height: 1.1; font-weight: 600;">{{ .Site.Params.author }}</h1>
+    <p style="font-size: 1.25rem; color: #94a3b8; max-width: 38rem; margin-bottom: 1rem;">
+      {{ .Site.Params.info }}
+    </p>
+    <p style="max-width: 38rem; color: #cbd5e1; line-height: 1.7;">
+      Personal notes on embedded systems, edge computing, Rust, and building things that actually work.
+    </p>
+  </div>
+
+  <!-- Recent writing – clean list -->
+  <div style="margin-bottom: 3.5rem;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+      <h2 style="margin: 0; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: #64748b;">Recent notes</h2>
+      <a href="/blog/" style="font-size: 0.9rem; color: #94a3b8;">All writing →</a>
     </div>
 
-    <ul class="sidebar-nav">
-      <li><a href="/about/">About</a></li>
-      <li><a href="/projects/">Projects</a></li>
-      <li><a href="/learning/">Learning tracks</a></li>
-      <li><a href="/blog/">All lab notes</a></li>
-      <li><a href="/contact/">Contact</a></li>
-    </ul>
-
-    <div style="margin-bottom:1.1rem;">
-      <span class="pill">Arduino</span>
-      <span class="pill">RPi</span><br>
-      <span class="pill">Rust</span>
-      <span class="pill">Edge</span>
-    </div>
-
-    <div style="display:flex; flex-direction:column; gap:0.5rem;">
-      <a href="/blog/" class="btn btn-primary" style="text-align:center;">Browse lab notes →</a>
-      <a href="/contact/" class="btn" style="text-align:center;">Get in touch</a>
-      <a href="/blog/index.xml" class="btn" target="_blank" style="text-align:center; font-size:0.8rem;">RSS</a>
-    </div>
-
-    <div style="margin-top:1.6rem; font-size:0.7rem; color:#475569; line-height:1.3;">
-      No trackers • No ads • Pure notes
-    </div>
-  </aside>
-
-  <!-- RIGHT: Main content column -->
-  <div class="main-col">
-    <!-- Latest notes -->
-    <section class="section reveal" style="padding-top:0.2rem; padding-bottom:1.6rem;">
-      <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:0.9rem;">
-        <h2 style="margin:0; font-size:1.75rem;">Latest in the lab</h2>
-        <a href="/blog/" style="color:#94a3b8; font-size:0.9rem;">all posts →</a>
-      </div>
-
-      <div style="display:flex; flex-direction:column; gap:0.35rem;">
-        {{ range first 8 (where .Site.RegularPages "Type" "blog" ) }}
-          <a href="{{ .RelPermalink }}" class="card card-accent" style="display:block; text-decoration:none; color:inherit; padding:0.9rem 1.15rem; font-size:1rem;">
-            <div style="display:flex; gap:1rem; align-items:baseline;">
-              <div style="font-size:0.78rem; color:#64748b; min-width:82px; font-feature-settings:'tnum';">
-                {{ .Date.Format "2006-01-02" }}
-              </div>
-              <div style="font-weight:600; color:#f1f5f9; line-height:1.3; flex:1;">
-                {{ .Title }}
-              </div>
-            </div>
-          </a>
-        {{ end }}
-      </div>
-    </section>
-
-    <!-- Highlights / What I explore -->
-    <section class="section reveal" style="padding-top:0; padding-bottom:1rem;">
-      <h3 style="margin:0 0 0.9rem; font-size:1.15rem; color:#cbd5e1;">What I explore</h3>
-
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:0.9rem;">
-        <div class="card" style="padding:0.9rem 1rem; font-size:0.9rem;">
-          <div style="margin-bottom:0.3rem;">🔧 <strong>Embedded &amp; IoT</strong></div>
-          <div style="color:#64748b; font-size:0.78rem;">Reliable sensor nodes, actuators, power-aware control loops.</div>
-        </div>
-        <div class="card" style="padding:0.9rem 1rem; font-size:0.9rem;">
-          <div style="margin-bottom:0.3rem;">🥧 <strong>Edge Computing</strong></div>
-          <div style="color:#64748b; font-size:0.78rem;">RPi fleets, local buffering, systemd supervision, offline resilience.</div>
-        </div>
-        <div class="card" style="padding:0.9rem 1rem; font-size:0.9rem;">
-          <div style="margin-bottom:0.3rem;">🦀 <strong>Rust Systems</strong></div>
-          <div style="color:#64748b; font-size:0.78rem;">Telemetry pipelines, CLIs, gateways. Strong guarantees.</div>
-        </div>
-      </div>
-    </section>
-
-    <div style="margin: 1.2rem 0 2.5rem;">
-      <a href="/projects/" class="btn" style="margin-right:0.6rem;">Projects &amp; approach</a>
-      <a href="/learning/" class="btn">Current learning</a>
+    <div>
+      {{ range first 7 (where .Site.RegularPages "Type" "blog") }}
+        <a href="{{ .RelPermalink }}" style="display: block; padding: 0.7rem 0; text-decoration: none; color: inherit; border-top: 1px solid #1f2937;">
+          <span style="color: #64748b; font-size: 0.85rem; margin-right: 1.1rem;">{{ .Date.Format "2006-01-02" }}</span>
+          <span style="color: #e2e8f0;">{{ .Title }}</span>
+        </a>
+      {{ end }}
     </div>
   </div>
-</div>
 
-<!-- Bottom full-width bar -->
-</div>
-<div style="margin-top:1rem; padding-bottom:2rem; text-align:center; opacity:0.75; font-size:0.8rem;">
-  Built for builders. No fluff.
+  <!-- Minimal footer links -->
+  <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #1f2937; font-size: 0.95rem; color: #64748b;">
+    <a href="/about/" style="color: inherit; margin-right: 1.5rem;">About</a>
+    <a href="/projects/" style="color: inherit; margin-right: 1.5rem;">Projects</a>
+    <a href="/learning/" style="color: inherit; margin-right: 1.5rem;">Learning</a>
+    <a href="/contact/" style="color: inherit; margin-right: 1.5rem;">Contact</a>
+    <a href="/blog/index.xml" target="_blank" style="color: inherit;">RSS</a>
+  </div>
+
 </div>
 {{ end }}

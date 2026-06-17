@@ -32,48 +32,42 @@ article.blogpost {
 }
 
 .post-content {
-  margin-top: 1.8rem;
-  font-size: 1.05rem;        /* slightly larger body in posts */
-  line-height: 1.78;
+  margin-top: 1.2rem;
+  font-size: 1.08rem;
+  line-height: 1.82;
+  max-width: 72ch;
 
   p, ul, ol {
-    margin: 1.35rem 0;
+    margin: 1.5rem 0;
   }
 
   img {
-    width: 92%;
-    margin: 2rem 4%;
-    box-shadow: 0 10px 15px -4px rgb(0 0 0 / 0.3);
-    border-radius: 6px;
+    max-width: 100%;
+    margin: 2.2rem 0;
   }
 
   .highlight {
-    font-size: 0.9rem;
-    line-height: 1.55;
+    font-size: 0.88rem;
+    line-height: 1.6;
   }
 
   code {
-    font-size: 0.92em;
+    font-size: 0.9em;
   }
 
   @include responsive.max-md() {
     font-size: 1rem;
-    line-height: 1.7;
-
-    img {
-      width: 100%;
-      margin: 1.4rem 0;
-    }
+    line-height: 1.72;
   }
 }
 
 .endofpost {
-  max-width: 280px;
-  margin: 3em auto 3.4em;
+  max-width: 120px;
+  margin: 2.5rem auto 2rem;
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid vars.$color-border;
+  border-top: 1px solid #2a3346;
   padding: 0;
 }
 

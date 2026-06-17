@@ -3,62 +3,22 @@
 
 .list {
   h1.title {
-    font-size: 2.4rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.65rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
   }
 
   ul {
     list-style: none;
-    margin: 1.8rem 0 2.5rem;
+    margin: 0;
     padding: 0;
 
     li {
-      display: flex;
-      gap: 1.4rem;
-      align-items: baseline;
-      padding: 1rem 1.2rem;
-      border-radius: 8px;
-      margin-bottom: 4px;
-      transition: all 0.15s ease;
-      border: 1px solid transparent;
-
-      &:hover {
-        background: vars.$color-surface;
-        border-color: vars.$color-border;
-        transform: translateX(3px);
-      }
-
-      span {
-        font-size: 0.85rem;
-        color: vars.$color-muted;
-        font-feature-settings: "tnum";
-        min-width: 110px;
-        flex-shrink: 0;
-      }
-
-      a {
-        color: vars.$color-text;
-        line-height: 1.35;
-        text-decoration: none;
-        font-size: 1.05rem;
-      }
-
-      a:hover {
-        color: vars.$accent;
-      }
+      padding: 0.55rem 0;
     }
 
-    @include responsive.max-md() {
-      li {
-        flex-direction: column;
-        gap: 0.2rem;
-        padding: 0.9rem 0.4rem;
-
-        span {
-          min-width: auto;
-          font-size: 0.78rem;
-        }
-      }
+    a:hover {
+      color: vars.$accent;
     }
   }
 }
