@@ -1,32 +1,14 @@
 <style>
   .footer {
-    width: 100%;
+    margin: 4rem 0 2rem;
+    font-size: 0.85rem;
+    color: vars.$color-muted;
     text-align: center;
-    line-height: 1.6;
-    margin: 4rem 0 2.5rem;
-    font-size: 0.9rem;
-    color: #64748b;
-    border-top: 1px solid #1f2937;
-    padding-top: 1.6rem;
-  }
-  .footer a {
-    color: #94a3b8;
   }
 </style>
 <footer class="footer">
-  <section class="container">
-    &copy; {{ now.Year }} {{ .Site.Params.author }}
-
-    <span style="margin: 0 0.6rem; opacity: 0.5;">·</span>
-
-    {{ with .Site.Params.social }}
-      {{ range $i, $e := sort . }}
-        <a href="{{ $e.url }}" target="_blank">{{ $e.name }}</a>{{ if lt $i (sub (len .) 1) }} <span style="opacity:0.4;">·</span> {{ end }}
-      {{ end }}
-    {{ end }}
-
-    <div style="margin-top: 0.4rem; font-size: 0.78rem; opacity: 0.6;">
-      No trackers • No ads • Built with Hugo
-    </div>
-  </section>
+  <div>
+    &copy; {{ now.Year }} {{ .Site.Params.author }} 
+    &nbsp;·&nbsp; <a href="/blog/index.xml">RSS</a>
+  </div>
 </footer>

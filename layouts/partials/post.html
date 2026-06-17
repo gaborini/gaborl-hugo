@@ -1,18 +1,13 @@
 <section class="container">
   <article class="blogpost">
-    <header style="margin-bottom: 2.5rem;">
-      <h1 class="title" style="margin-bottom: 0.6rem;">{{ .Title }}</h1>
-      <div style="color: #64748b; font-size: 0.95rem;">
-        {{ .Date.Format "January 2, 2006" }} 
-        {{ if .ReadingTime }} · {{ .ReadingTime }} min{{ end }}
+    <header style="margin-bottom: 2rem;">
+      <h1 class="title">{{ .Title }}</h1>
+      <div style="color: vars.$color-muted; font-size: 0.9rem;">
+        {{ .Date.Format "January 2, 2006" }}
       </div>
       {{ with .GetTerms "categories" }}
-        <div style="margin-top: 0.5rem; font-size: 0.85rem; color:#64748b;">
-          {{ $categories := slice }}
-          {{ range . }}
-            {{ $categories = $categories | append (printf `<a href="%s" style="color:inherit;">%s</a>` .RelPermalink .LinkTitle) }}
-          {{ end }}
-          {{ delimit $categories " · " | safeHTML }}
+        <div style="margin-top: 0.4rem; font-size: 0.82rem; color: vars.$color-muted;">
+          {{ range . }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
         </div>
       {{ end }}
     </header>
@@ -23,9 +18,8 @@
 
     <hr class="endofpost" />
 
-    <div style="margin-top: 2rem; font-size: 0.9rem; color: #64748b; text-align: center;">
-      <a href="/blog/index.xml" target="_blank">Subscribe to RSS</a> · 
-      <a href="/contact/">Questions or feedback?</a>
-    </div>
+    <p style="margin-top: 2rem; text-align: center; font-size: 0.9rem; color: vars.$color-muted;">
+      <a href="/blog/index.xml" target="_blank">RSS</a> &nbsp;·&nbsp; <a href="/contact/">Feedback?</a>
+    </p>
   </article>
 </section>

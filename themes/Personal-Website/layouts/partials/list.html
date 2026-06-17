@@ -1,17 +1,16 @@
 <section class="container list">
   <h1 class="title">{{ .Title }}</h1>
-  <p class="intro">Notes, experiments and lessons from the lab.</p>
 
   <ul class="post-list">
     {{ range .Pages }}
       <li>
-        <time class="date">{{ .Date.Format "2006-01-02" }}</time>
-        <a href="{{ .Permalink }}" class="title-link">{{ .Title }}</a>
+        <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+        <a href="{{ .Permalink }}" class="title">{{ .Title }}</a>
       </li>
     {{ end }}
   </ul>
 
-  <p class="rss-note">
-    <a href="/blog/index.xml" target="_blank">RSS feed</a>
+  <p style="margin-top: 2rem; font-size: 0.9rem;">
+    <a href="/blog/index.xml" target="_blank">RSS</a>
   </p>
 </section>

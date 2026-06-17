@@ -9,7 +9,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // Set base to 10px
+  font-size: 17px; 
   scroll-behavior: smooth;
 }
 
@@ -19,15 +19,14 @@ body {
   background-color: vars.$color-bg;
 
   font-family: "Noto Sans Mono", monospace;
-  font-size: 1.9rem;
+  font-size: 1rem;
   font-weight: 400;
 
-  letter-spacing: 0.015em;
-  line-height: 1.72;
+  line-height: 1.75;
 
   @include responsive.max-md() {
-    font-size: 1.6rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.65;
   }
 }
 
@@ -64,51 +63,24 @@ img {
   justify-content: center;
 }
 
-/* Clean elegant styles + more graphic elements */
+/* Clean, minimal base */
 .section {
-  padding: 4.5rem 0;
+  padding: 3rem 0;
 }
 
 .section + .section {
   border-top: 1px solid vars.$color-border;
 }
 
-.glass {
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid vars.$color-border;
-}
-
-/* Subtle list items (more graphic on hover) */
+/* Simple cards / rows */
 .card {
   background: transparent;
   border: none;
-  padding: 0.5rem 0;
-  transition: all 0.2s ease;
-  position: relative;
+  padding: 0;
 }
 
 .card:hover {
   color: vars.$accent;
-  padding-left: 0.3rem;
-}
-
-.card-accent {
-  position: relative;
-}
-
-/* Graphic elements */
-.graphic-line {
-  height: 1px;
-  background: linear-gradient(to right, transparent, vars.$accent, transparent);
-  opacity: 0.4;
-}
-
-.icon {
-  display: inline-block;
-  width: 1.1em;
-  height: 1.1em;
-  vertical-align: -0.1em;
 }
 
 .btn {
@@ -164,78 +136,23 @@ a {
   color: vars.$color-muted;
 }
 
-/* Optional light split styles (kept minimal) */
-.split-layout {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 2.5rem;
-}
-
-@media (max-width: 860px) {
-  .split-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Homepage graphic icons */
-.graphic-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border: 1px solid vars.$color-border;
-  border-radius: 8px;
-  background: vars.$color-surface;
-  color: vars.$color-muted;
-  transition: all 0.22s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.graphic-icon:hover {
-  color: vars.$accent;
-  transform: translateY(-3px) rotate(4deg);
-  border-color: vars.$accent;
-  box-shadow: 0 6px 14px -4px rgba(0,0,0,0.07);
-}
-
-/* Elegant post list rows */
-.post-row {
-  display: flex;
-  gap: 1.15rem;
-  padding: 0.75rem 0.1rem;
-  text-decoration: none;
-  color: inherit;
-  border-bottom: 1px solid vars.$color-border;
-  transition: all 0.2s ease;
-}
-
-.post-row:hover {
-  padding-left: 0.35rem;
-  color: vars.$accent;
-}
-
-.post-row .post-date {
-  width: 86px;
-  flex-shrink: 0;
-  font-size: 0.82rem;
-  color: vars.$color-muted;
-  font-feature-settings: "tnum";
-  padding-top: 2px;
-}
-
-.post-row .post-title {
-  font-size: 1.02rem;
-  line-height: 1.35;
+/* Simple post links on home */
+.post-link {
+  display: block;
+  padding: 0.4rem 0;
   color: vars.$color-text;
+  text-decoration: none;
+  border-top: 1px solid vars.$color-border;
 }
 
-/* Extra animations for menu and elements */
-.topnav-link {
-  transition: color 0.2s ease, transform 0.15s ease;
+.post-link:hover {
+  color: vars.$accent;
 }
 
-.topnav-link:hover {
-  transform: translateY(-1px);
+.post-link .post-date {
+  color: vars.$color-muted;
+  font-size: 0.82rem;
+  margin-right: 1rem;
 }
 
 .main-col {

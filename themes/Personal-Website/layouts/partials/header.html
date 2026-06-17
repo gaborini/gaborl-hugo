@@ -1,54 +1,20 @@
 <script>
   function toggleMenu() {
-    const menu = document.getElementById("topnav-items");
-    const btn = document.querySelector(".mobilemenu");
-    const isOpen = menu.classList.contains("navopen");
-    if (isOpen) {
-      menu.classList.remove("navopen");
-      btn.classList.remove("open");
-    } else {
-      menu.classList.add("navopen");
-      btn.classList.add("open");
-    }
+    const x = document.getElementById("topnav-items");
+    x.classList.toggle("navopen");
   }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    // Close on link click
-    const links = document.querySelectorAll('#topnav-items .topnav-link');
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        const m = document.getElementById('topnav-items');
-        const b = document.querySelector(".mobilemenu");
-        if (m) m.classList.remove('navopen');
-        if (b) b.classList.remove('open');
-      });
-    });
-
-    // Active nav link
-    const currentPath = window.location.pathname;
-    links.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === currentPath || (currentPath.startsWith('/blog') && href === '/blog/')) {
-        link.classList.add('active');
-      }
-    });
-  });
 </script>
 
 <section class="container">
-  <nav class="topnav" id="topnav">
+  <nav class="topnav">
     <a class="topnav-title" href="{{ .Site.BaseURL }}">
       {{ .Site.Title }}
     </a>
     {{ with .Site.Menus.main }}
-      <a href="javascript:void(0);" class="mobilemenu" onclick="toggleMenu()" aria-label="Toggle menu">
-        <span class="menu-icon"></span>
-      </a>
+      <a href="javascript:void(0);" class="mobilemenu" onclick="toggleMenu()">Menu</a>
       <ul id="topnav-items" class="topnav-list">
         {{ range sort . }}
-          <li class="topnav-item">
-            <a class="topnav-link" href="{{ .URL }}">{{ .Name }}</a>
-          </li>
+          <li><a class="topnav-link" href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       </ul>
     {{ end }}
