@@ -4,13 +4,63 @@
 .list {
   h1.title {
     font-size: 1.6rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 0.3rem;
     font-weight: 600;
+    color: vars.$color-heading;
   }
 
-  ul {
+  .intro {
+    color: vars.$color-muted;
+    margin-bottom: 1.8rem;
+    font-size: 0.95rem;
+  }
+
+  .post-list {
     list-style: none;
     margin: 0;
     padding: 0;
+    border-top: 1px solid vars.$color-border;
+  }
+
+  .post-list li {
+    display: flex;
+    gap: 1.25rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid vars.$color-border;
+    transition: background 0.1s ease;
+  }
+
+  .post-list li:hover {
+    background: vars.$color-surface-2;
+  }
+
+  .date {
+    width: 92px;
+    flex-shrink: 0;
+    font-size: 0.82rem;
+    color: vars.$color-muted;
+    font-feature-settings: "tnum";
+    padding-top: 0.15rem;
+  }
+
+  .title-link {
+    color: vars.$color-text;
+    text-decoration: none;
+    font-size: 1.02rem;
+    line-height: 1.35;
+  }
+
+  .title-link:hover {
+    color: vars.$accent;
+  }
+
+  .rss-note {
+    margin-top: 2.2rem;
+    font-size: 0.9rem;
+    color: vars.$color-muted;
+  }
+
+  .rss-note a {
+    color: vars.$accent;
   }
 }
